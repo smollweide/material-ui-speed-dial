@@ -1,0 +1,12 @@
+[ignore]
+<PROJECT_ROOT>/node_modules/.*.json
+<PROJECT_ROOT>/node_modules/material-ui/*
+<PROJECT_ROOT>/dist/.*
+
+[include]
+
+[libs]
+
+[options]
+esproposal.decorators=ignore
+suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe

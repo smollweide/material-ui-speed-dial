@@ -1,0 +1,148 @@
+{
+  "name": "material-ui-speed-dial",
+  "version": "0.1.0",
+  "description": "React Component that implements a speed dial using Material-UI.",
+  "email": "simon.mollweide@web.de",
+  "author": "Simon Mollweide <simon.mollweide@web.de>",
+  "url": "https://github.com/smollweide/material-ui-speed-dial",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/smollweide/material-ui-speed-dial"
+  },
+  "main": "dist/index.js",
+  "bugs": {
+    "url": "https://github.com/smollweide/material-ui-speed-dial/issues"
+  },
+  "preferGlobal": false,
+  "private": false,
+  "license": "MIT",
+  "homepage": "http://smollweide.github.io/material-ui-speed-dial/",
+  "scripts": {
+    "c": "git-cz",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "precommit": "lint-staged && npm-run-all lint test check-coverage",
+    "start": "react-scripts start",
+    "prebuild-demo": "npm run lint",
+    "build-demo": "react-scripts build",
+    "predeploy-demo": "npm run build",
+    "deploy-demo": "gh-pages -d build",
+    "pretest": "rimraf coverage",
+    "test": "cross-env NODE_ENV=test node_modules/.bin/jest --coverage",
+    "test:dev": "cross-env NODE_ENV=test node_modules/.bin/jest --watch --notify",
+    "test:single": "cross-env NODE_ENV=test node_modules/.bin/jest",
+    "check-coverage": "node_modules/.bin/istanbul check-coverage --statements 95 --functions 95 --lines 95",
+    "report-coverage": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
+    "lint": "npm-run-all lint:*",
+    "lint:js": "node_modules/.bin/eslint .",
+    "flow": "node_modules/.bin/flow",
+    "flow-restart": "node_modules/.bin/flow stop && node_modules/.bin/flow",
+    "flow-install": "node_modules/.bin/flow-typed install -i dev",
+    "prestatic-server": "open http://localhost:9000",
+    "static-server": "pushstate-server build",
+    "prebuild": "rimraf dist",
+    "build": "npm-run-all build:*",
+    "build:babel": "NODE_ENV=release babel ./src/components --out-dir ./dist/components --ignore spec.js",
+    "build:index": "BABEL_ENV=es babel ./src/speed-dial.js --out-file ./dist/index.js",
+    "prettier": "node_modules/.bin/prettier --write 'src/**/*.js' 'bin/**/*.js' --config package.json"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "material design",
+    "material-ui",
+    "speed-dial"
+  ],
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "prettier": {
+    "useTabs": true,
+    "printWidth": 120,
+    "tabWidth": 4,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "parser": "babylon",
+    "semi": true
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier",
+      "git add"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "peerDependencies": {
+    "material-ui": "1.x",
+    "material-ui-icons": "1.x",
+    "react": "16.x",
+    "react-dom": "16.x"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "6.1.0",
+    "@commitlint/config-conventional": "6.1.0",
+    "@namics/eslint-config": "4.2.0",
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-eslint": "8.2.1",
+    "babel-plugin-syntax-flow": "6.18.0",
+    "babel-plugin-transform-dev-warning": "0.1.1",
+    "babel-plugin-transform-flow-strip-types": "6.22.0",
+    "babel-plugin-transform-react-constant-elements": "6.23.0",
+    "babel-plugin-transform-react-inline-elements": "6.22.0",
+    "babel-plugin-transform-react-remove-prop-types": "0.4.13",
+    "babel-plugin-transform-replace-object-assign": "0.2.1",
+    "babel-plugin-transform-runtime": "6.23.0",
+    "babel-polyfill": "6.26.0",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-1": "6.24.1",
+    "babel-runtime": "6.26.0",
+    "classnames": "2.2.5",
+    "commitizen": "2.9.6",
+    "coveralls": "3.0.0",
+    "cross-env": "5.1.3",
+    "cz-conventional-changelog": "2.1.0",
+    "enzyme": "3.3.0",
+    "eslint": "4.17.0",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "flow-bin": "0.65.0",
+    "flow-typed": "2.3.0",
+    "gh-pages": "1.1.0",
+    "husky": "0.14.3",
+    "istanbul": "0.4.5",
+    "jest": "22.1.4",
+    "jss": "9.8.0",
+    "jss-preset-default": "4.3.0",
+    "jss-rtl": "0.2.1",
+    "lint-staged": "6.1.0",
+    "material-ui": "1.0.0-beta.33",
+    "material-ui-icons": "1.0.0-beta.17",
+    "nms-core-utils": "1.0.0",
+    "npm-run-all": "4.1.2",
+    "prettier": "1.10.2",
+    "prop-types": "15.6.0",
+    "pushstate-server": "3.0.1",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "react-jss": "8.3.3",
+    "react-router-dom": "4.2.2",
+    "react-scripts": "1.1.1",
+    "react-test-renderer": "16.2.0",
+    "recompose": "0.26.0",
+    "rimraf": "2.6.2",
+    "sinon": "4.3.0"
+  }
+}
