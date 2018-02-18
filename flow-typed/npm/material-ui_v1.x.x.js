@@ -86,7 +86,7 @@ declare module 'material-ui/BottomNavigation' {
 }
 
 declare module 'material-ui/Button/Button' {
-	declare type Color = 'default' | 'inherit' | 'primary' | 'accent' | 'contrast';
+	declare type Color = 'default' | 'inherit' | 'primary' | 'accent' | 'contrast' | 'secondary';
 
 	declare module.exports: React$ComponentType<{
 		children: React$Node,

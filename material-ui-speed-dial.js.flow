@@ -1,14 +1,24 @@
 // @flow
 
-export type RenderClosedButtonPropsType = {
+export type RenderButtonPropsType = {
+	className: string,
 	onClick: () => void,
+};
+export type RenderButtonIconPropsType = {
+	className: string,
 };
 export type RenderOpenedButtonPropsType = {
 	onClick: () => void,
 };
+export type RenderOpenedButtonIconPropsType = {
+	className: string,
+};
 
 export type SpeedDialPropsType = {
 	animationDelay?: number,
-	renderClosedButton: (props: RenderClosedButtonPropsType) => React$Element<*>,
-	renderOpenedButton: (props: RenderOpenedButtonPropsType) => React$Element<*>,
+	renderButton: (props: RenderButtonPropsType, propsIcon: RenderOpenedButtonIconPropsType) => React$Element<*>,
+	renderOpenedButton?: (
+		props: RenderOpenedButtonPropsType,
+		propsIcon: RenderOpenedButtonIconPropsType
+	) => React$Element<*>,
 };

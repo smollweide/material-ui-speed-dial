@@ -14,7 +14,7 @@ export type SpeedDialAllPropsType = SpeedDialWithStylePropsType & SpeedDialProps
 const STATE = {
 	CLOSED: 'closed',
 	OPENING: 'opening',
-	OPEN: 'open',
+	OPENED: 'opened',
 	CLOSING: 'closing',
 };
 export type StateEnumType = $Values<typeof STATE>;
@@ -25,7 +25,7 @@ export type ForceSetStateType = ({ state: StateEnumType }, cb?: () => void) => v
 
 class SpeedDial extends Component<SpeedDialAllPropsType, SpeedDialStateType> {
 	static displayName = 'SpeedDial';
-	static defaultValues = {
+	static defaultProps = {
 		animationDelay: 500,
 	};
 
@@ -44,7 +44,7 @@ class SpeedDial extends Component<SpeedDialAllPropsType, SpeedDialStateType> {
 	handleOpen = () => {
 		this.forceSetState({ state: STATE.OPENING }, () => {
 			setTimeout(() => {
-				this.forceSetState({ state: STATE.OPEN });
+				this.forceSetState({ state: STATE.OPENED });
 			}, this.props.animationDelay);
 		});
 	};
@@ -59,32 +59,48 @@ class SpeedDial extends Component<SpeedDialAllPropsType, SpeedDialStateType> {
 	forceSetState: ForceSetStateType = () => {};
 
 	renderButton(): React$Element<*> | Array<React$Element<*>> {
-		const { classes = {}, renderClosedButton, renderOpenedButton } = this.props;
+		const { classes, renderButton, renderOpenedButton } = this.props;
 		const { state } = this.state;
 
-		if (state === STATE.OPEN) {
-			return renderOpenedButton({
-				className: classes.button,
-				onClick: this.handleClose,
-			});
-		}
-
-		if (state === STATE.CLOSED) {
-			return renderClosedButton({
-				className: classes.button,
-				onClick: this.handleOpen,
-			});
+		if (!renderOpenedButton) {
+			return renderButton(
+				{
+					className: `${classes.button}`,
+					onClick: state === STATE.OPENED ? this.handleClose : this.handleOpen,
+				},
+				{
+					className: `${classes.buttonIcon} ${classes.buttonIconSingle} ${
+						classes[`buttonIconSingle--state-${state}`]
+					}`,
+				}
+			);
 		}
 
 		return [
-			renderOpenedButton({
-				className: classes.button,
-				onClick: this.handleClose,
-			}),
-			renderClosedButton({
-				className: classes.button,
-				onClick: this.handleOpen,
-			}),
+			renderButton(
+				{
+					key: 'closed',
+					className: `${classes.button} ${classes.buttonClosed} ${classes[`buttonClosed--state-${state}`]}`,
+					onClick: state === STATE.OPENED ? this.handleClose : this.handleOpen,
+				},
+				{
+					className: `${classes.buttonIcon} ${classes.buttonClosedIcon} ${
+						classes[`buttonClosedIcon--state-${state}`]
+					}`,
+				}
+			),
+			renderOpenedButton(
+				{
+					key: 'open',
+					className: `${classes.button} ${classes.buttonOpened} ${classes[`buttonOpened--state-${state}`]}`,
+					onClick: this.handleClose,
+				},
+				{
+					className: `${classes.buttonIcon} ${classes.buttonOpenedIcon} ${
+						classes[`buttonOpenedIcon--state-${state}`]
+					}`,
+				}
+			),
 		];
 	}
 
