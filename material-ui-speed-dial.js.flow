@@ -1,6 +1,7 @@
 // @flow
 
 export type RenderButtonPropsType = {
+	key?: string,
 	className: string,
 	onClick: () => void,
 };
@@ -8,6 +9,8 @@ export type RenderButtonIconPropsType = {
 	className: string,
 };
 export type RenderOpenedButtonPropsType = {
+	key: string,
+	className: string,
 	onClick: () => void,
 };
 export type RenderOpenedButtonIconPropsType = {
@@ -15,6 +18,7 @@ export type RenderOpenedButtonIconPropsType = {
 };
 
 export type SpeedDialPropsType = {
+	className: string,
 	animationDelay?: number,
 	renderButton: (props: RenderButtonPropsType, propsIcon: RenderOpenedButtonIconPropsType) => React$Element<*>,
 	renderOpenedButton?: (

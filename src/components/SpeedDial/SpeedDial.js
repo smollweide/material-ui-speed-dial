@@ -105,8 +105,8 @@ class SpeedDial extends Component<SpeedDialAllPropsType, SpeedDialStateType> {
 	}
 
 	render(): React$Element<*> {
-		const { classes } = this.props;
-		return <div className={classes.root}>{this.renderButton()}</div>;
+		const { className } = this.props;
+		return <div className={className}>{this.renderButton()}</div>;
 	}
 }
 

@@ -20,7 +20,7 @@
   "scripts": {
     "c": "git-cz",
     "commitmsg": "commitlint -e $GIT_PARAMS",
-    "precommit": "lint-staged && npm-run-all lint",
+    "precommit": "lint-staged && npm-run-all lint flow",
     "start": "react-scripts start",
     "prebuild-demo": "npm run lint",
     "build-demo": "react-scripts build",

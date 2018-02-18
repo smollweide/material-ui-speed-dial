@@ -1,20 +1,12 @@
 // @flow
-import type { StylesType, ThemeType } from '../../types/styles';
+import type { StylesType } from '../../types/styles';
 
 let stylesRaw;
 
-export const styles = (theme: ThemeType): StylesType => {
+export const styles = (): StylesType => {
 	stylesRaw = {
-		root: {
-			position: 'fixed',
-			bottom: theme.spacing.unit * 2,
-			right: theme.spacing.unit * 2,
-		},
 		button: {
 			transition: 'all 0.5s',
-			position: 'absolute',
-			bottom: 0,
-			right: 0,
 		},
 		buttonIcon: {
 			transition: 'all 0.5s',
