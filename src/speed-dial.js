@@ -1,9 +1,9 @@
 // @flow
 import SpeedDial from './components/SpeedDial/SpeedDial';
-// import BubbleListSrc from './components/bubble-list/bubble-list';
-// import BubbleListItemSrc from './components/bubble-list-item/bubble-list-item';
+import SpeedDialItemSrc from './components/SpeedDialItem/SpeedDialItem';
+import SpeedDialLabelSrc from './components/SpeedDialLabel/SpeedDialLabel';
 
-// export const BubbleList = BubbleListSrc;
-// export const BubbleListItem = BubbleListItemSrc;
+export const SpeedDialItem = SpeedDialItemSrc;
+export const SpeedDialLabel = SpeedDialLabelSrc;
 
 export default SpeedDial;

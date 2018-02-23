@@ -4,12 +4,14 @@ import React, { Component } from 'react';
 import { withStyles } from 'material-ui/styles';
 import styles from './SpeedDial.styles';
 import type { ClassesType } from './SpeedDial.styles';
-import type { SpeedDialPropsType } from '../../../material-ui-speed-dial.js.flow';
+import type { SpeedDialPropsType, StateEnumType, SpeedDialStateType } from '../../../material-ui-speed-dial.js.flow';
 
 export type SpeedDialWithStylePropsType = {
 	classes: ClassesType,
 };
 export type SpeedDialAllPropsType = SpeedDialWithStylePropsType & SpeedDialPropsType;
+
+export type ForceSetStateType = ({ state: StateEnumType }, cb?: () => void) => void;
 
 const STATE = {
 	CLOSED: 'closed',
@@ -17,13 +19,8 @@ const STATE = {
 	OPENED: 'opened',
 	CLOSING: 'closing',
 };
-export type StateEnumType = $Values<typeof STATE>;
-export type SpeedDialStateType = {
-	state: StateEnumType,
-};
-export type ForceSetStateType = ({ state: StateEnumType }, cb?: () => void) => void;
 
-class SpeedDial extends Component<SpeedDialAllPropsType, SpeedDialStateType> {
+export class SpeedDial extends Component<SpeedDialAllPropsType, SpeedDialStateType> {
 	static displayName = 'SpeedDial';
 	static defaultProps = {
 		animationDelay: 500,
@@ -38,6 +35,7 @@ class SpeedDial extends Component<SpeedDialAllPropsType, SpeedDialStateType> {
 	}
 
 	componentWillUnmount() {
+		/* istanbul ignore next */
 		this.forceSetState = () => {};
 	}
 
@@ -56,7 +54,7 @@ class SpeedDial extends Component<SpeedDialAllPropsType, SpeedDialStateType> {
 		});
 	};
 
-	forceSetState: ForceSetStateType = () => {};
+	forceSetState: ForceSetStateType;
 
 	renderButton(): React$Element<*> | Array<React$Element<*>> {
 		const { classes, renderButton, renderOpenedButton } = this.props;
@@ -81,7 +79,7 @@ class SpeedDial extends Component<SpeedDialAllPropsType, SpeedDialStateType> {
 				{
 					key: 'closed',
 					className: `${classes.button} ${classes.buttonClosed} ${classes[`buttonClosed--state-${state}`]}`,
-					onClick: state === STATE.OPENED ? this.handleClose : this.handleOpen,
+					onClick: this.handleOpen,
 				},
 				{
 					className: `${classes.buttonIcon} ${classes.buttonClosedIcon} ${
@@ -105,8 +103,20 @@ class SpeedDial extends Component<SpeedDialAllPropsType, SpeedDialStateType> {
 	}
 
 	render(): React$Element<*> {
-		const { className } = this.props;
-		return <div className={className}>{this.renderButton()}</div>;
+		const { classes, className, renderList, children } = this.props;
+		const { state } = this.state;
+		return (
+			<div className={className}>
+				{renderList({
+					className: `${classes.list} ${classes[`list--state-${state}`]}`,
+					children: children({
+						state,
+						className: '',
+					}),
+				})}
+				{this.renderButton()}
+			</div>
+		);
 	}
 }
 

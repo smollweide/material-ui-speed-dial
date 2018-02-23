@@ -12,6 +12,7 @@ type ThemeValueType = string | number;
 
 export type ThemeType = {
 	[key: string]: ThemeValueType,
+	direction: 'rtl' | 'ltr',
 	spacing: {
 		[key: string]: ThemeValueType,
 		unit: number,
@@ -56,6 +57,10 @@ export type ThemeType = {
 		up: (value: string) => ThemeValueType,
 	},
 	typography: {
+		[key: string]: {
+			[key: string]: ThemeValueType,
+		},
 		pxToRem: (value: number) => ThemeValueType,
 	},
+	shadows: Array<ThemeValueType>,
 };

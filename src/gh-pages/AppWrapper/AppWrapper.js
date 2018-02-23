@@ -30,6 +30,7 @@ class AppWrapper extends Component<AppWrapperPropsType> {
 
 	componentWillMount() {
 		this.styleContext = createContext();
+		this.styleContext.theme.direction = this.props.direction;
 	}
 
 	componentDidMount() {
@@ -47,6 +48,7 @@ class AppWrapper extends Component<AppWrapperPropsType> {
 	componentWillReceiveProps(nextProps: AppWrapperPropsType) {
 		if (nextProps.direction !== this.props.direction && document.body) {
 			document.body.dir = nextProps.direction;
+			this.styleContext.theme.direction = nextProps.direction;
 		}
 	}
 

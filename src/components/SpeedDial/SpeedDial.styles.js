@@ -71,6 +71,26 @@ export const styles = (): StylesType => {
 		'buttonOpenedIcon--state-closing': {
 			transform: 'rotate(-180deg)',
 		},
+
+		list: {
+			transition: 'all 0.2s',
+			position: 'absolute',
+			padding: 0,
+			margin: 0,
+			listStyleType: 'none',
+		},
+		'list--state-closed': {
+			transform: 'scale(0) translate(100%, 100%)',
+		},
+		'list--state-opening': {
+			transform: 'scale(1) translate(0, 0)',
+		},
+		'list--state-opened': {
+			transform: 'scale(1) translate(0, 0)',
+		},
+		'list--state-closing': {
+			transform: 'scale(0) translate(100%, 100%)',
+		},
 	};
 	return stylesRaw;
 };

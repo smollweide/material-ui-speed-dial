@@ -1,5 +1,14 @@
 // @flow
 
+export type StateEnumType = 'closed' | 'opening' | 'opened' | 'closing';
+export type SpeedDialStateType = {
+	state: StateEnumType,
+};
+
+export type RenderPropsType = {
+	state: StateEnumType,
+	className: string,
+};
 export type RenderButtonPropsType = {
 	key?: string,
 	className: string,
@@ -16,8 +25,32 @@ export type RenderOpenedButtonPropsType = {
 export type RenderOpenedButtonIconPropsType = {
 	className: string,
 };
+export type RenderListPropsType = {
+	children: React$Node,
+	className: string,
+};
+
+export type RenderAvatarPropsType = {
+	className: string,
+};
+export type RenderLabelPropsType = {
+	className: string,
+};
+
+export type SpeedDialLabelPropsType = {
+	className: string,
+	text: string,
+};
+
+export type SpeedDialItemPropsType = {
+	className?: string,
+	state: StateEnumType,
+	renderAvatar?: (props: RenderAvatarPropsType) => React$Element<*>,
+	children: (props: RenderLabelPropsType) => React$Element<*>,
+};
 
 export type SpeedDialPropsType = {
+	children: (props: RenderPropsType) => React$Node,
 	className: string,
 	animationDelay?: number,
 	renderButton: (props: RenderButtonPropsType, propsIcon: RenderOpenedButtonIconPropsType) => React$Element<*>,
@@ -25,4 +58,5 @@ export type SpeedDialPropsType = {
 		props: RenderOpenedButtonPropsType,
 		propsIcon: RenderOpenedButtonIconPropsType
 	) => React$Element<*>,
+	renderList: (props: RenderListPropsType) => React$Element<*>,
 };

@@ -1,0 +1,230 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SpeedDial snapshot: default 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SpeedDial
+    animationDelay={500}
+    className="className"
+    classes={[Function]}
+    renderButton={[Function]}
+    renderList={[Function]}
+>
+    [Function]
+</SpeedDial>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        undefined,
+        <button
+          className="undefined"
+          onClick={[Function]}
+/>,
+      ],
+      "className": "className",
+    },
+    "ref": null,
+    "rendered": Array [
+      undefined,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "undefined",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          undefined,
+          <button
+            className="undefined"
+            onClick={[Function]}
+/>,
+        ],
+        "className": "className",
+      },
+      "ref": null,
+      "rendered": Array [
+        undefined,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "undefined",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`SpeedDial snapshot: renderOpenedButton 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SpeedDial
+    animationDelay={500}
+    className="className"
+    classes={[Function]}
+    renderButton={[Function]}
+    renderList={[Function]}
+    renderOpenedButton={[Function]}
+>
+    [Function]
+</SpeedDial>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        undefined,
+        Array [
+          <button
+            className="undefined undefined undefined"
+            onClick={[Function]}
+/>,
+          <button
+            className="undefined undefined undefined"
+            onClick={[Function]}
+/>,
+        ],
+      ],
+      "className": "className",
+    },
+    "ref": null,
+    "rendered": Array [
+      undefined,
+      Object {
+        "instance": null,
+        "key": "closed",
+        "nodeType": "host",
+        "props": Object {
+          "className": "undefined undefined undefined",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": "open",
+        "nodeType": "host",
+        "props": Object {
+          "className": "undefined undefined undefined",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          undefined,
+          Array [
+            <button
+              className="undefined undefined undefined"
+              onClick={[Function]}
+/>,
+            <button
+              className="undefined undefined undefined"
+              onClick={[Function]}
+/>,
+          ],
+        ],
+        "className": "className",
+      },
+      "ref": null,
+      "rendered": Array [
+        undefined,
+        Object {
+          "instance": null,
+          "key": "closed",
+          "nodeType": "host",
+          "props": Object {
+            "className": "undefined undefined undefined",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": "open",
+          "nodeType": "host",
+          "props": Object {
+            "className": "undefined undefined undefined",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
