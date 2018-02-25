@@ -39,7 +39,8 @@
     "flow-install": "node_modules/.bin/flow-typed install -i dev",
     "prebuild": "rimraf dist",
     "build": "npm-run-all lint flow test check-coverage build:*",
-    "build:babel": "NODE_ENV=release babel ./src/components --out-dir ./dist/components --ignore spec.js",
+    "build:components": "NODE_ENV=release babel ./src/components --out-dir ./dist/components --ignore spec.js",
+    "build:presets": "NODE_ENV=release babel ./src/presets --out-dir ./dist/presets --ignore spec.js",
     "build:index": "BABEL_ENV=es babel ./src/speed-dial.js --out-file ./dist/index.js",
     "prettier": "node_modules/.bin/prettier --write 'src/**/*.js' 'bin/**/*.js' --config package.json",
     "semantic-release": "node_modules/.bin/semantic-release"

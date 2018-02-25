@@ -24,6 +24,15 @@ export class SpeedDial extends Component<SpeedDialAllPropsType, SpeedDialStateTy
 	static displayName = 'SpeedDial';
 	static defaultProps = {
 		animationDelay: 500,
+		preset: {
+			root: '',
+			button: '',
+			list: '',
+			item: '',
+			firstItem: '',
+			avatar: '',
+			label: '',
+		},
 	};
 
 	state = {
@@ -57,13 +66,13 @@ export class SpeedDial extends Component<SpeedDialAllPropsType, SpeedDialStateTy
 	forceSetState: ForceSetStateType;
 
 	renderButton(): React$Element<*> | Array<React$Element<*>> {
-		const { classes, renderButton, renderOpenedButton } = this.props;
+		const { classes, preset, renderButton, renderOpenedButton } = this.props;
 		const { state } = this.state;
 
 		if (!renderOpenedButton) {
 			return renderButton(
 				{
-					className: `${classes.button}`,
+					className: `${classes.button} ${preset.button}`,
 					onClick: state === STATE.OPENED ? this.handleClose : this.handleOpen,
 				},
 				{
@@ -78,7 +87,9 @@ export class SpeedDial extends Component<SpeedDialAllPropsType, SpeedDialStateTy
 			renderButton(
 				{
 					key: 'closed',
-					className: `${classes.button} ${classes.buttonClosed} ${classes[`buttonClosed--state-${state}`]}`,
+					className: `${classes.button} ${classes.buttonClosed} ${classes[`buttonClosed--state-${state}`]} ${
+						preset.button
+					}`,
 					onClick: this.handleOpen,
 				},
 				{
@@ -90,7 +101,9 @@ export class SpeedDial extends Component<SpeedDialAllPropsType, SpeedDialStateTy
 			renderOpenedButton(
 				{
 					key: 'open',
-					className: `${classes.button} ${classes.buttonOpened} ${classes[`buttonOpened--state-${state}`]}`,
+					className: `${classes.button} ${classes.buttonOpened} ${classes[`buttonOpened--state-${state}`]} ${
+						preset.button
+					}`,
 					onClick: this.handleClose,
 				},
 				{
@@ -103,15 +116,16 @@ export class SpeedDial extends Component<SpeedDialAllPropsType, SpeedDialStateTy
 	}
 
 	render(): React$Element<*> {
-		const { classes, className, renderList, children } = this.props;
+		const { classes, preset, className, renderList, children } = this.props;
 		const { state } = this.state;
 		return (
-			<div className={className}>
+			<div className={`${className || ''} ${preset.root}`}>
 				{renderList({
-					className: `${classes.list} ${classes[`list--state-${state}`]}`,
+					className: `${classes.list} ${classes[`list--state-${state}`]} ${preset.list}`,
 					children: children({
 						state,
-						className: '',
+						preset,
+						className: `${preset.item}`,
 					}),
 				})}
 				{this.renderButton()}

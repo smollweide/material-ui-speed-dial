@@ -8,6 +8,17 @@ ShallowWrapper {
     animationDelay={500}
     className="className"
     classes={[Function]}
+    preset={
+        Object {
+            "avatar": "",
+            "button": "",
+            "firstItem": "",
+            "item": "",
+            "label": "",
+            "list": "",
+            "root": "",
+          }
+    }
     renderButton={[Function]}
     renderList={[Function]}
 >
@@ -28,11 +39,11 @@ ShallowWrapper {
       "children": Array [
         undefined,
         <button
-          className="undefined"
+          className="undefined "
           onClick={[Function]}
 />,
       ],
-      "className": "className",
+      "className": "className ",
     },
     "ref": null,
     "rendered": Array [
@@ -42,7 +53,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "className": "undefined",
+          "className": "undefined ",
           "onClick": [Function],
         },
         "ref": null,
@@ -61,11 +72,11 @@ ShallowWrapper {
         "children": Array [
           undefined,
           <button
-            className="undefined"
+            className="undefined "
             onClick={[Function]}
 />,
         ],
-        "className": "className",
+        "className": "className ",
       },
       "ref": null,
       "rendered": Array [
@@ -75,7 +86,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "undefined",
+            "className": "undefined ",
             "onClick": [Function],
           },
           "ref": null,
@@ -104,6 +115,17 @@ ShallowWrapper {
     animationDelay={500}
     className="className"
     classes={[Function]}
+    preset={
+        Object {
+            "avatar": "",
+            "button": "",
+            "firstItem": "",
+            "item": "",
+            "label": "",
+            "list": "",
+            "root": "",
+          }
+    }
     renderButton={[Function]}
     renderList={[Function]}
     renderOpenedButton={[Function]}
@@ -126,16 +148,16 @@ ShallowWrapper {
         undefined,
         Array [
           <button
-            className="undefined undefined undefined"
+            className="undefined undefined undefined "
             onClick={[Function]}
 />,
           <button
-            className="undefined undefined undefined"
+            className="undefined undefined undefined "
             onClick={[Function]}
 />,
         ],
       ],
-      "className": "className",
+      "className": "className ",
     },
     "ref": null,
     "rendered": Array [
@@ -145,7 +167,7 @@ ShallowWrapper {
         "key": "closed",
         "nodeType": "host",
         "props": Object {
-          "className": "undefined undefined undefined",
+          "className": "undefined undefined undefined ",
           "onClick": [Function],
         },
         "ref": null,
@@ -157,7 +179,7 @@ ShallowWrapper {
         "key": "open",
         "nodeType": "host",
         "props": Object {
-          "className": "undefined undefined undefined",
+          "className": "undefined undefined undefined ",
           "onClick": [Function],
         },
         "ref": null,
@@ -177,16 +199,16 @@ ShallowWrapper {
           undefined,
           Array [
             <button
-              className="undefined undefined undefined"
+              className="undefined undefined undefined "
               onClick={[Function]}
 />,
             <button
-              className="undefined undefined undefined"
+              className="undefined undefined undefined "
               onClick={[Function]}
 />,
           ],
         ],
-        "className": "className",
+        "className": "className ",
       },
       "ref": null,
       "rendered": Array [
@@ -196,7 +218,7 @@ ShallowWrapper {
           "key": "closed",
           "nodeType": "host",
           "props": Object {
-            "className": "undefined undefined undefined",
+            "className": "undefined undefined undefined ",
             "onClick": [Function],
           },
           "ref": null,
@@ -208,7 +230,114 @@ ShallowWrapper {
           "key": "open",
           "nodeType": "host",
           "props": Object {
-            "className": "undefined undefined undefined",
+            "className": "undefined undefined undefined ",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`SpeedDial snapshot: without className 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SpeedDial
+    animationDelay={500}
+    className={undefined}
+    classes={[Function]}
+    preset={
+        Object {
+            "avatar": "",
+            "button": "",
+            "firstItem": "",
+            "item": "",
+            "label": "",
+            "list": "",
+            "root": "",
+          }
+    }
+    renderButton={[Function]}
+    renderList={[Function]}
+>
+    [Function]
+</SpeedDial>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        undefined,
+        <button
+          className="undefined "
+          onClick={[Function]}
+/>,
+      ],
+      "className": " ",
+    },
+    "ref": null,
+    "rendered": Array [
+      undefined,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "undefined ",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          undefined,
+          <button
+            className="undefined "
+            onClick={[Function]}
+/>,
+        ],
+        "className": " ",
+      },
+      "ref": null,
+      "rendered": Array [
+        undefined,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "undefined ",
             "onClick": [Function],
           },
           "ref": null,

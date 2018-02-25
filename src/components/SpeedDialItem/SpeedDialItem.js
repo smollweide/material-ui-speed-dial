@@ -17,17 +17,18 @@ export const SpeedDialItem = ({
 	renderAvatar,
 	children,
 	className,
+	preset,
 	classes,
 }: SpeedDialWithStylePropsType & SpeedDialItemPropsType): React$Element<*> => {
 	return (
 		<li className={`${classes.root} ${className !== undefined ? className : ''}`}>
 			<a className={`${classes.link} ${classes[`link--state-${state}`]}`}>
 				{children({
-					className: '',
+					className: `${preset.label}`,
 				})}
 				{renderAvatar &&
 					renderAvatar({
-						className: classes.avatar,
+						className: `${classes.avatar} ${preset.avatar}`,
 					})}
 			</a>
 		</li>

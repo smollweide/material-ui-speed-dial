@@ -19,6 +19,11 @@ describe('SpeedDial', () => {
 		expect(tree).toMatchSnapshot();
 		expect(tree.find('button').length).toBe(1);
 	});
+	it('snapshot: without className', () => {
+		const _props = { ...props, className: undefined };
+		const tree = shallow(<SpeedDial {..._props} />);
+		expect(tree).toMatchSnapshot();
+	});
 	it('snapshot: renderOpenedButton', () => {
 		const _props = { ...props, renderOpenedButton: propsBtn => <button {...propsBtn} /> };
 		const tree = shallow(<SpeedDial {..._props} />);
