@@ -24,13 +24,17 @@ const PageGettingStarted = ({ classes }: PageGettingStartedPropsType): React$Ele
 		</Typography>
 		<Typography gutterBottom variant="body1" component="p" color="inherit" className={classes.text}>
 			{'Material-UI speed dial is available as an '}
-			<a target="_blank" rel="noopener noreferrer" href="https://www.npmjs.com/package/material-ui-speed-dial">
+			<a
+				target="_blank"
+				rel="noopener noreferrer"
+				href="https://www.npmjs.com/package/smollweide-material-ui-speed-dial"
+			>
 				npm package
 			</a>
 			{'.'}
 		</Typography>
 		<pre className={classes.pre}>
-			<code className={classes.code}>npm install --save material-ui-speed-dial</code>
+			<code className={classes.code}>npm install --save @smollweide/material-ui-speed-dial</code>
 		</pre>
 	</TemplateExample>
 );

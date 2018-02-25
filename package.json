@@ -1,5 +1,5 @@
 {
-  "name": "material-ui-speed-dial",
+  "name": "@smollweide/material-ui-speed-dial",
   "version": "0.1.0",
   "description": "Components, that implements material design speed dial for material-ui v1",
   "email": "simon.mollweide@web.de",
@@ -16,7 +16,7 @@
   "preferGlobal": false,
   "private": false,
   "license": "MIT",
-  "homepage": "http://smollweide.github.io/material-ui-speed-dial/",
+  "homepage": "https://smollweide.github.io/material-ui-speed-dial",
   "scripts": {
     "c": "git-cz",
     "commitmsg": "commitlint -e $GIT_PARAMS",

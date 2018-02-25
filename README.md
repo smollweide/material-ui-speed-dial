@@ -3,14 +3,16 @@
 
 > Components, that implements [material design speed dial](https://material.io/guidelines/components/buttons-floating-action-button.html#buttons-floating-action-button-transitions) for [material-ui v1](https://material-ui-next.com/)
 
+[demo](https://smollweide.github.io/material-ui-speed-dial)
+
 ## Installation
 
 For the installation of Material-UI please have look in the [Material-UI Documentation](https://material-ui-next.com/)
 
-Material-UI speed dial is available as an [npm package](https://www.npmjs.org/package/material-ui-speed-dial).
+Material-UI speed dial is available as an [npm package](https://www.npmjs.com/package/@smollweide/material-ui-speed-dial).
 
 ```sh
-npm install material-ui-speed-dial
+npm install @smollweide/material-ui-speed-dial
 ```
 
 ## Usage
@@ -22,9 +24,9 @@ tbd
 
 ## Shields
 [![coverage status](https://coveralls.io/repos/github/smollweide/material-ui-speed-dial/badge.svg?branch=master)](https://coveralls.io/github/smollweide/material-ui-speed-dial?branch=master)
-[![npm](https://img.shields.io/npm/v/material-ui-speed-dial.svg)](http://npm.im/material-ui-speed-dial)
-[![downloads](https://img.shields.io/npm/dm/material-ui-speed-dial.svg)](https://npm-stat.com/charts.html?package=material-ui-speed-dial)
-[![MIT License](https://img.shields.io/npm/l/material-ui-speed-dial.svg)](http://opensource.org/licenses/MIT)
+[![npm](https://img.shields.io/npm/v/@smollweide/material-ui-speed-dial.svg)](http://npm.im/@smollweide/material-ui-speed-dial)
+[![downloads](https://img.shields.io/npm/dm/@smollweide/material-ui-speed-dial.svg)](https://npm-stat.com/charts.html?package=@smollweide/material-ui-speed-dial)
+[![MIT License](https://img.shields.io/npm/l/@smollweide/material-ui-speed-dial.svg)](http://opensource.org/licenses/MIT)
 [![Codestyle](https://img.shields.io/badge/codestyle-namics-green.svg)](https://github.com/namics/eslint-config-namics)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
