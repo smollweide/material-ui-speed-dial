@@ -17,7 +17,64 @@ npm install @smollweide/material-ui-speed-dial
 
 ## Usage
 
-tbd
+```
+import React from 'react';
+import { withStyles } from 'material-ui/styles';
+import Button from 'material-ui/Button';
+import Avatar from 'material-ui/Avatar';
+
+import AddIcon from 'material-ui-icons/Add';
+import EditIcon from 'material-ui-icons/Edit';
+
+import SpeedDial, { SpeedDialItem, SpeedDialLabel } from 'material-ui-speed-dial';
+import presetFixedBottomRight from 'material-ui-speed-dial/dist/presets/presetFixedBottomRight';
+
+const MyMaterialUiSpeedDial = ({ classes }) => {
+  return (
+    <SpeedDial
+      preset={classes}
+      renderButton={(props, propsIcon) => (
+        <Button {...props} variant="fab" color="primary" aria-label="add">
+          <AddIcon {...propsIcon} />
+        </Button>
+      )}
+      renderOpenedButton={(props, propsIcon) => (
+        <Button {...props} variant="fab" color="secondary" aria-label="edit">
+          <EditIcon {...propsIcon} />
+        </Button>
+      )}
+      renderList={props => <ul {...props} />}
+    >
+      {props => [
+        <SpeedDialItem
+          {...props}
+          key="c"
+          renderAvatar={propsAvatar => (
+            <Avatar {...propsAvatar} alt="Eric Hoffman" src="http://lorempixel.com/80/80/people/3" />
+          )}
+        >
+          {propsLabel => <SpeedDialLabel {...propsLabel} text="Eric Hoffman" />}
+        </SpeedDialItem>,
+        <SpeedDialItem
+          {...props}
+          key="b"
+          renderAvatar={propsAvatar => (
+            <Avatar {...propsAvatar} alt="Grace Ng" src="http://lorempixel.com/80/80/people/9" />
+          )}
+        >
+          {propsLabel => <SpeedDialLabel {...propsLabel} text="Grace Ng" />}
+        </SpeedDialItem>,
+        <SpeedDialItem {...props} key="a">
+          {propsLabel => <SpeedDialLabel {...propsLabel} text="Edit" />}
+        </SpeedDialItem>,
+      ]}
+    </SpeedDial>
+  );
+};
+MyMaterialUiSpeedDial.displayName = 'MyMaterialUiSpeedDial';
+
+export default withStyles(presetFixedBottomRight)(MyMaterialUiSpeedDial);
+```
 
 ## Examples
 - [Basic](https://smollweide.github.io/material-ui-speed-dial/#/example-basic)
