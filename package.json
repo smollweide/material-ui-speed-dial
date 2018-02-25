@@ -42,7 +42,7 @@
     "build:babel": "NODE_ENV=release babel ./src/components --out-dir ./dist/components --ignore spec.js",
     "build:index": "BABEL_ENV=es babel ./src/speed-dial.js --out-file ./dist/index.js",
     "prettier": "node_modules/.bin/prettier --write 'src/**/*.js' 'bin/**/*.js' --config package.json",
-    "semantic-release": "semantic-release pre && npm publish --access public && semantic-release post"
+    "semantic-release": "node_modules/.bin/semantic-release"
   },
   "keywords": [
     "react",
@@ -83,6 +83,14 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/components/**/*.{js}"
+    ]
   },
   "peerDependencies": {
     "material-ui": "1.x",
@@ -143,12 +151,7 @@
     "react-test-renderer": "16.2.0",
     "recompose": "0.26.0",
     "rimraf": "2.6.2",
-    "sinon": "4.3.0",
-    "semantic-release": "^12.4.1"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/components/**/*.{js}"
-    ]
+    "semantic-release": "12.4.1",
+    "sinon": "4.3.0"
   }
 }
