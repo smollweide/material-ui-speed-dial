@@ -1,11 +1,12 @@
 // @flow
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { HashRouter, Route } from 'react-router-dom';
 import Reboot from 'material-ui/Reboot';
 
 import AppWrapper from '../AppWrapper/AppWrapper';
 import AppFrame from '../AppFrame/AppFrame';
 import PageHome from '../PageHome/PageHome';
+import PageGettingStarted from '../PageGettingStarted/PageGettingStarted';
 import PageExampleBasic from '../PageExampleBasic/PageExampleBasic';
 
 export const PALETTE_TYPE = {
@@ -51,7 +52,7 @@ class App extends Component<AppPropsType, AppStateType> {
 
 	render(): React$Element<*> {
 		return (
-			<BrowserRouter>
+			<HashRouter>
 				<AppWrapper direction={this.state.direction} paletteType={this.state.paletteType}>
 					<Reboot />
 					<AppFrame
@@ -61,10 +62,11 @@ class App extends Component<AppPropsType, AppStateType> {
 						paletteType={this.state.paletteType}
 					>
 						<Route exact component={PageHome} path="/" />
+						<Route exact component={PageGettingStarted} path="/getting-started" />
 						<Route exact component={PageExampleBasic} path="/example-basic" />
 					</AppFrame>
 				</AppWrapper>
-			</BrowserRouter>
+			</HashRouter>
 		);
 	}
 }

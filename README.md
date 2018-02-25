@@ -1,19 +1,13 @@
 
-# material-ui-speed-dial [![Build Status](https://img.shields.io/travis/smollweide/material-ui-speed-dial/master.svg)](https://travis-ci.org/smollweide/material-ui-speed-dial)
+# material-ui-speed-dial (:exclamation:Work in process) [![Build Status](https://img.shields.io/travis/smollweide/material-ui-speed-dial/master.svg)](https://travis-ci.org/smollweide/material-ui-speed-dial)
 
-> React Component that implements a speed dial using [Material-UI](http://www.material-ui.com).
-
-like inbox | toolbox version
------------- | -------------
-<img src="https://cloud.githubusercontent.com/assets/2912007/21943125/28c3e96a-d9d0-11e6-96f1-dc3fbf4dae8d.gif" alt="inbox" width="180" /> | <img src="https://cloud.githubusercontent.com/assets/2912007/21943136/32341bf0-d9d0-11e6-8a8f-919b68d19ee5.gif" alt="toolbox" width="180" />
-[open demo](https://smollweide.github.io/material-ui-speed-dial/#/inbox) | [open demo](https://smollweide.github.io/material-ui-speed-dial/#/toolbox)
-
+> Components, that implements [material design speed dial](https://material.io/guidelines/components/buttons-floating-action-button.html#buttons-floating-action-button-transitions) for [material-ui v1](https://material-ui-next.com/)
 
 ## Installation
 
-For the installation of Material-UI please have look in the [Material-UI Documentation](https://github.com/callemall/material-ui)
+For the installation of Material-UI please have look in the [Material-UI Documentation](https://material-ui-next.com/)
 
-React speed dial is available as an [npm package](https://www.npmjs.org/package/material-ui-speed-dial).
+Material-UI speed dial is available as an [npm package](https://www.npmjs.org/package/material-ui-speed-dial).
 
 ```sh
 npm install material-ui-speed-dial
@@ -21,46 +15,10 @@ npm install material-ui-speed-dial
 
 ## Usage
 
-```jsx
-import React from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-
-import Avatar from 'material-ui/Avatar';
-import { SpeedDial, BubbleList, BubbleListItem } from 'material-ui-speed-dial';
-
-const App = () => {
-  return (
-    <MuiThemeProvider>
-      <SpeedDial>
-        <BubbleList>
-          <BubbleListItem
-            primaryText="Eric Hoffman"
-            rightAvatar={<Avatar src="http://lorempixel.com/80/80" />}
-          />
-        </BubbleList>
-      </SpeedDial>
-    </MuiThemeProvider>
-  );
-};
-
-App.displayName = 'App';
-
-export default App;
-```
-## Documentation
-[http://smollweide.github.io/material-ui-speed-dial/](http://smollweide.github.io/material-ui-speed-dial/)
+tbd
 
 ## Examples
-- [Basic](https://smollweide.github.io/material-ui-speed-dial/#/basic)
-- [Position top left](https://smollweide.github.io/material-ui-speed-dial/#/top-left)
-- [Position inline](https://smollweide.github.io/material-ui-speed-dial/#/inline)
-- [Without backdrop](https://smollweide.github.io/material-ui-speed-dial/#/no-backdrop)
-- [Like inbox](https://smollweide.github.io/material-ui-speed-dial/#/inbox)
-- [Custom direction](https://smollweide.github.io/material-ui-speed-dial/#/direction)
-- [With `List` component](https://smollweide.github.io/material-ui-speed-dial/#/list)
-- [Toolbox](https://smollweide.github.io/material-ui-speed-dial/#/toolbox)
-- [Toolbox fixed](https://smollweide.github.io/material-ui-speed-dial/#/toolbox-fixed)
-- [Controlled SpeedDial](https://smollweide.github.io/material-ui-speed-dial/#/bug11)
+- [Basic](https://smollweide.github.io/material-ui-speed-dial/#/example-basic)
 
 ## Shields
 [![coverage status](https://coveralls.io/repos/github/smollweide/material-ui-speed-dial/badge.svg?branch=master)](https://coveralls.io/github/smollweide/material-ui-speed-dial?branch=master)
@@ -85,12 +43,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 5. Visit github and make your pull request.
 
 ### Scripts
-- Install `npm install` or `yarn install`
-- Start developing `npm start` or `yarn start`
-- Lint `npm run lint` or `yarn lint`
-- Test `npm test` or `yarn test`
-- Build `npm run build` or `yarn build`
-- Static server `npm run static-server` or `yarn static-server`
+- Install `npm install`
+- Start developing `npm start`
+- Lint `npm run lint`
+- Test `npm test`
+- Build `npm run build`
 
 ### Coding style
 Please follow the coding style of the current code base.

@@ -1,5 +1,5 @@
 // @flow
-import React from 'react';
+import React, { Component } from 'react';
 import { withStyles } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
@@ -7,7 +7,9 @@ import Typography from 'material-ui/Typography';
 import IconButton from 'material-ui/IconButton';
 import Tooltip from 'material-ui/Tooltip';
 import MenuIcon from 'material-ui-icons/Menu';
+
 import GitHubIcon from '../GitHub/GitHub';
+import AppDrawer from './AppDrawer/AppDrawer';
 import styles from './AppFrame.styles';
 
 // types
@@ -23,20 +25,18 @@ export type AppFramePropsType = {
 	onToggleDirection: () => void,
 };
 export type AppFrameStateType = {
-	anchorEl: null | HTMLElement,
+	isDrawerOpen: boolean,
 };
 
-class AppFrame extends React.Component<AppFramePropsType, AppFrameStateType> {
+class AppFrame extends Component<AppFramePropsType, AppFrameStateType> {
+	static displayName = 'AppFrame';
+
 	state = {
-		anchorEl: null,
+		isDrawerOpen: false,
 	};
 
-	handleMenu = (event: SyntheticInputEvent<HTMLInputElement>) => {
-		this.setState({ anchorEl: event.currentTarget });
-	};
-
-	handleClose = () => {
-		this.setState({ anchorEl: null });
+	handleToggleDrawer = () => {
+		this.setState({ isDrawerOpen: !this.state.isDrawerOpen });
 	};
 
 	render(): React$Element<*> {
@@ -45,12 +45,13 @@ class AppFrame extends React.Component<AppFramePropsType, AppFrameStateType> {
 
 		return (
 			<div className={classes.root}>
+				<AppDrawer isOpen={this.state.isDrawerOpen} onClose={this.handleToggleDrawer} />
 				<AppBar
 					position="static"
 					className={`${classes.appBar}${title === null ? ` ${classes.appBarHome}` : ''}`}
 				>
 					<Toolbar>
-						<IconButton color="inherit" aria-label="Menu">
+						<IconButton onClick={this.handleToggleDrawer} color="inherit" aria-label="Menu">
 							<MenuIcon />
 						</IconButton>
 						{title !== null && (
@@ -59,7 +60,7 @@ class AppFrame extends React.Component<AppFramePropsType, AppFrameStateType> {
 							</Typography>
 						)}
 						<div className={classes.grow} />
-						<Tooltip id="appbar-github" title="Material-UI Speed dial GitHub repo" enterDelay={300}>
+						<Tooltip id="appbar-github" title="Material-UI speed dial GitHub repo" enterDelay={300}>
 							<IconButton
 								href="https://github.com/smollweide/material-ui-speed-dial"
 								target="_blank"

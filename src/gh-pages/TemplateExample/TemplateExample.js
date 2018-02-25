@@ -18,7 +18,7 @@ const TemplateExample = ({ classes, title, children }: TemplateExamplePropsType)
 	<div>
 		<div className={classes.content}>
 			<div className={classes.text}>
-				<Typography variant="headline" component="h1" color="inherit" className={classes.headline}>
+				<Typography gutterBottom variant="headline" component="h1" color="inherit" className={classes.headline}>
 					{title}
 				</Typography>
 			</div>

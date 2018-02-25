@@ -6,7 +6,7 @@ let stylesRaw;
 export const styles = (theme: ThemeType): StylesType => {
 	stylesRaw = {
 		content: {
-			paddingTop: theme.spacing.unit * 8,
+			paddingTop: theme.spacing.unit * 12,
 			paddingBottom: theme.spacing.unit * 8,
 			[theme.breakpoints.up('sm')]: {
 				paddingTop: theme.spacing.unit * 12,
@@ -24,6 +24,7 @@ export const styles = (theme: ThemeType): StylesType => {
 		headline: {
 			maxWidth: 500,
 			textAlign: 'center',
+			marginBottom: theme.spacing.unit * 4,
 		},
 	};
 	return stylesRaw;

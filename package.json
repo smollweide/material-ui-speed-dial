@@ -1,7 +1,7 @@
 {
   "name": "material-ui-speed-dial",
   "version": "0.1.0",
-  "description": "React Component that implements a speed dial using Material-UI.",
+  "description": "Components, that implements material design speed dial for material-ui v1",
   "email": "simon.mollweide@web.de",
   "author": "Simon Mollweide <simon.mollweide@web.de>",
   "url": "https://github.com/smollweide/material-ui-speed-dial",
@@ -20,11 +20,11 @@
   "scripts": {
     "c": "git-cz",
     "commitmsg": "commitlint -e $GIT_PARAMS",
-    "precommit": "lint-staged && npm-run-all lint flow",
+    "precommit": "lint-staged && npm-run-all lint flow test",
     "start": "react-scripts start",
-    "prebuild-demo": "npm run lint",
+    "prebuild-demo": "npm-run-all lint flow test",
     "build-demo": "react-scripts build",
-    "predeploy-demo": "npm run build",
+    "predeploy-demo": "npm-run-all build-demo",
     "deploy-demo": "gh-pages -d build",
     "pretest": "rimraf coverage",
     "test": "cross-env NODE_ENV=test react-scripts test --coverage",
@@ -37,10 +37,8 @@
     "flow": "node_modules/.bin/flow",
     "flow-restart": "node_modules/.bin/flow stop && node_modules/.bin/flow",
     "flow-install": "node_modules/.bin/flow-typed install -i dev",
-    "prestatic-server": "open http://localhost:9000",
-    "static-server": "pushstate-server build",
     "prebuild": "rimraf dist",
-    "build": "npm-run-all build:*",
+    "build": "npm-run-all lint flow test build:*",
     "build:babel": "NODE_ENV=release babel ./src/components --out-dir ./dist/components --ignore spec.js",
     "build:index": "BABEL_ENV=es babel ./src/speed-dial.js --out-file ./dist/index.js",
     "prettier": "node_modules/.bin/prettier --write 'src/**/*.js' 'bin/**/*.js' --config package.json"
@@ -50,6 +48,7 @@
     "react-component",
     "material design",
     "material-ui",
+    "material-ui-next",
     "speed-dial"
   ],
   "files": [
