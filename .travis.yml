@@ -8,7 +8,12 @@ node_js:
   - '8'
 before_script:
   - npm prune
+  - npm run lint
+  - npm run flow
+  - npm run test
+  - npm run check-coverage
   - npm run build
+  - npm run build-mjs
 after_success:
   - npm run semantic-release
   - npm run report-coverage
