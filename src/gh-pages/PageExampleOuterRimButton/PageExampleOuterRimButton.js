@@ -35,7 +35,7 @@ export type PageExampleBasicPropsType = {
 
 const PageExampleBasic = ({ classes }: PageExampleBasicPropsType) => {
 	return (
-		<TemplateExample title="Basic Example">
+		<TemplateExample title="Outer rim button example">
 			<SpeedDial
 				preset={classes}
 				renderButton={(props: RenderButtonPropsType, propsIcon: RenderButtonIconPropsType) => (
