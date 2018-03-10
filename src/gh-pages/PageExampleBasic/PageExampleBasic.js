@@ -70,7 +70,7 @@ const PageExampleBasic = ({ classes }: PageExampleBasicPropsType) => {
 					>
 						{(propsLabel: RenderLabelPropsType) => <SpeedDialLabel {...propsLabel} text="Grace Ng" />}
 					</SpeedDialItem>,
-					<SpeedDialItem {...props} key="a">
+					<SpeedDialItem {...{ ...props, className: `${props.className} ${classes.firstItem}` }} key="a">
 						{(propsLabel: RenderLabelPropsType) => <SpeedDialLabel {...propsLabel} text="Edit" />}
 					</SpeedDialItem>,
 				]}
