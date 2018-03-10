@@ -7,20 +7,20 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Unknown
     classes={[Function]}
     preset={
-        Object {
-            "avatar": "",
-            "button": "",
-            "firstItem": "",
-            "item": "",
-            "label": "",
-            "list": "",
-            "root": "",
-          }
+      Object {
+        "avatar": "",
+        "button": "",
+        "firstItem": "",
+        "item": "",
+        "label": "",
+        "list": "",
+        "root": "",
+      }
     }
     state="opened"
->
+  >
     [Function]
-</Unknown>,
+  </Unknown>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -35,9 +35,7 @@ ShallowWrapper {
     "props": Object {
       "children": <a
         className="undefined undefined"
->
-        
-</a>,
+      />,
       "className": "undefined ",
     },
     "ref": null,
@@ -69,9 +67,7 @@ ShallowWrapper {
       "props": Object {
         "children": <a
           className="undefined undefined"
->
-          
-</a>,
+        />,
         "className": "undefined ",
       },
       "ref": null,
@@ -113,21 +109,21 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Unknown
     classes={[Function]}
     preset={
-        Object {
-            "avatar": "",
-            "button": "",
-            "firstItem": "",
-            "item": "",
-            "label": "",
-            "list": "",
-            "root": "",
-          }
+      Object {
+        "avatar": "",
+        "button": "",
+        "firstItem": "",
+        "item": "",
+        "label": "",
+        "list": "",
+        "root": "",
+      }
     }
     renderAvatar={[Function]}
     state="opened"
->
+  >
     [Function]
-</Unknown>,
+  </Unknown>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -142,12 +138,12 @@ ShallowWrapper {
     "props": Object {
       "children": <a
         className="undefined undefined"
->
+      >
         <a
-                className="undefined "
-                state="opened"
+          className="undefined "
+          state="opened"
         />
-</a>,
+      </a>,
       "className": "undefined ",
     },
     "ref": null,
@@ -161,7 +157,7 @@ ShallowWrapper {
           <a
             className="undefined "
             state="opened"
-/>,
+          />,
         ],
         "className": "undefined undefined",
       },
@@ -193,12 +189,12 @@ ShallowWrapper {
       "props": Object {
         "children": <a
           className="undefined undefined"
->
+        >
           <a
-                    className="undefined "
-                    state="opened"
+            className="undefined "
+            state="opened"
           />
-</a>,
+        </a>,
         "className": "undefined ",
       },
       "ref": null,
@@ -212,7 +208,7 @@ ShallowWrapper {
             <a
               className="undefined "
               state="opened"
-/>,
+            />,
           ],
           "className": "undefined undefined",
         },
@@ -254,20 +250,20 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Unknown
     classes={[Function]}
     preset={
-        Object {
-            "avatar": "avatar",
-            "button": "button",
-            "firstItem": "firstItem",
-            "item": "item",
-            "label": "label",
-            "list": "list",
-            "root": "root",
-          }
+      Object {
+        "avatar": "avatar",
+        "button": "button",
+        "firstItem": "firstItem",
+        "item": "item",
+        "label": "label",
+        "list": "list",
+        "root": "root",
+      }
     }
     state="opened"
->
+  >
     [Function]
-</Unknown>,
+  </Unknown>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -282,9 +278,7 @@ ShallowWrapper {
     "props": Object {
       "children": <a
         className="undefined undefined"
->
-        
-</a>,
+      />,
       "className": "undefined ",
     },
     "ref": null,
@@ -316,9 +310,7 @@ ShallowWrapper {
       "props": Object {
         "children": <a
           className="undefined undefined"
->
-          
-</a>,
+        />,
         "className": "undefined ",
       },
       "ref": null,

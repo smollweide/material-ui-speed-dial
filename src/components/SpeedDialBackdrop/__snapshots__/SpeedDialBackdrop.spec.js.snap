@@ -9,7 +9,7 @@ ShallowWrapper {
     classes={[Function]}
     onClick={[Function]}
     state="opened"
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],

@@ -26,8 +26,8 @@ import Avatar from 'material-ui/Avatar';
 import AddIcon from 'material-ui-icons/Add';
 import EditIcon from 'material-ui-icons/Edit';
 
-import SpeedDial, { SpeedDialItem, SpeedDialLabel } from 'material-ui-speed-dial';
-import presetFixedBottomRight from 'material-ui-speed-dial/dist/presets/presetFixedBottomRight';
+import SpeedDial, { SpeedDialItem, SpeedDialLabel } from '@smollweide/material-ui-speed-dial';
+import presetFixedBottomRight from '@smollweide/material-ui-speed-dial/dist/presets/presetFixedBottomRight';
 
 const MyMaterialUiSpeedDial = ({ classes }) => {
   return (

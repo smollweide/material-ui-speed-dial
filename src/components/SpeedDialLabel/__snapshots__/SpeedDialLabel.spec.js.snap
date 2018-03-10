@@ -8,7 +8,7 @@ ShallowWrapper {
     className="className"
     classes={[Function]}
     text="text"
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],

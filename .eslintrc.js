@@ -1,7 +1,7 @@
 module.exports = {
 	extends: [
-		require.resolve('@namics/eslint-config/configurations/es6-react.js'),
-		require.resolve('@namics/eslint-config/configurations/es6-react-disable-styles.js'),
+		require.resolve('@namics/eslint-config/configurations/es8-react.js'),
+		require.resolve('@namics/eslint-config/configurations/es8-react-disable-styles.js'),
 		require.resolve('@namics/eslint-config/configurations/flow.js'),
 		require.resolve('@namics/eslint-config/configurations/flow-disable-styles.js'),
 	],
