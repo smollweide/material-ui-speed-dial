@@ -17,7 +17,7 @@ npm install @smollweide/material-ui-speed-dial
 
 ## Usage
 
-```
+```jsx
 import React from 'react';
 import { withStyles } from 'material-ui/styles';
 import Button from 'material-ui/Button';
@@ -26,7 +26,7 @@ import Avatar from 'material-ui/Avatar';
 import AddIcon from 'material-ui-icons/Add';
 import EditIcon from 'material-ui-icons/Edit';
 
-import SpeedDial, { SpeedDialItem, SpeedDialLabel } from '@smollweide/material-ui-speed-dial';
+import SpeedDial, { SpeedDialItem, SpeedDialLabel, SpeedDialBackdrop } from '@smollweide/material-ui-speed-dial';
 import presetFixedBottomRight from '@smollweide/material-ui-speed-dial/dist/presets/presetFixedBottomRight';
 
 const MyMaterialUiSpeedDial = ({ classes }) => {
@@ -44,6 +44,7 @@ const MyMaterialUiSpeedDial = ({ classes }) => {
         </Button>
       )}
       renderList={props => <ul {...props} />}
+      renderBackdrop={(props) => <SpeedDialBackdrop {...props} />}
     >
       {props => [
         <SpeedDialItem
@@ -64,7 +65,7 @@ const MyMaterialUiSpeedDial = ({ classes }) => {
         >
           {propsLabel => <SpeedDialLabel {...propsLabel} text="Grace Ng" />}
         </SpeedDialItem>,
-        <SpeedDialItem {...props} key="a">
+        <SpeedDialItem {...{ ...props, className: `${props.className} ${classes.firstItem}` }} key="a">
           {propsLabel => <SpeedDialLabel {...propsLabel} text="Edit" />}
         </SpeedDialItem>,
       ]}
