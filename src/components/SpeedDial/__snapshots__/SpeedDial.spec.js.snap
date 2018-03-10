@@ -34,16 +34,20 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
       "children": Array [
         undefined,
-        <button
-          className="undefined "
-          onClick={[Function]}
-/>,
+        <div
+          className=" className"
+>
+          <button
+                    className="undefined "
+                    onClick={[Function]}
+                    state="closed"
+          />
+</div>,
       ],
-      "className": "className ",
     },
     "ref": null,
     "rendered": Array [
@@ -53,30 +57,56 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "className": "undefined ",
-          "onClick": [Function],
+          "children": Array [
+            undefined,
+            <button
+              className="undefined "
+              onClick={[Function]}
+              state="closed"
+/>,
+          ],
+          "className": " className",
         },
         "ref": null,
-        "rendered": null,
-        "type": "button",
+        "rendered": Array [
+          undefined,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "undefined ",
+              "onClick": [Function],
+              "state": "closed",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "button",
+          },
+        ],
+        "type": "div",
       },
     ],
-    "type": "div",
+    "type": Symbol(react.fragment),
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
         "children": Array [
           undefined,
-          <button
-            className="undefined "
-            onClick={[Function]}
-/>,
+          <div
+            className=" className"
+>
+            <button
+                        className="undefined "
+                        onClick={[Function]}
+                        state="closed"
+            />
+</div>,
         ],
-        "className": "className ",
       },
       "ref": null,
       "rendered": Array [
@@ -86,15 +116,229 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "undefined ",
+            "children": Array [
+              undefined,
+              <button
+                className="undefined "
+                onClick={[Function]}
+                state="closed"
+/>,
+            ],
+            "className": " className",
+          },
+          "ref": null,
+          "rendered": Array [
+            undefined,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "undefined ",
+                "onClick": [Function],
+                "state": "closed",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`SpeedDial snapshot: renderBackdrop 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SpeedDial
+    animationDelay={500}
+    className="className"
+    classes={[Function]}
+    preset={
+        Object {
+            "avatar": "",
+            "button": "",
+            "firstItem": "",
+            "item": "",
+            "label": "",
+            "list": "",
+            "root": "",
+          }
+    }
+    renderBackdrop={[Function]}
+    renderButton={[Function]}
+    renderList={[Function]}
+>
+    [Function]
+</SpeedDial>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <div
+          className="undefined backdrop"
+          onClick={[Function]}
+          state="closed"
+/>,
+        <div
+          className=" className"
+>
+          <button
+                    className="undefined "
+                    onClick={[Function]}
+                    state="closed"
+          />
+</div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "undefined backdrop",
+          "onClick": [Function],
+          "state": "closed",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            undefined,
+            <button
+              className="undefined "
+              onClick={[Function]}
+              state="closed"
+/>,
+          ],
+          "className": " className",
+        },
+        "ref": null,
+        "rendered": Array [
+          undefined,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "undefined ",
+              "onClick": [Function],
+              "state": "closed",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <div
+            className="undefined backdrop"
+            onClick={[Function]}
+            state="closed"
+/>,
+          <div
+            className=" className"
+>
+            <button
+                        className="undefined "
+                        onClick={[Function]}
+                        state="closed"
+            />
+</div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "undefined backdrop",
             "onClick": [Function],
+            "state": "closed",
           },
           "ref": null,
           "rendered": null,
-          "type": "button",
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              undefined,
+              <button
+                className="undefined "
+                onClick={[Function]}
+                state="closed"
+/>,
+            ],
+            "className": " className",
+          },
+          "ref": null,
+          "rendered": Array [
+            undefined,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "undefined ",
+                "onClick": [Function],
+                "state": "closed",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "button",
+            },
+          ],
+          "type": "div",
         },
       ],
-      "type": "div",
+      "type": Symbol(react.fragment),
     },
   ],
   Symbol(enzyme.__options__): Object {
@@ -142,103 +386,169 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
       "children": Array [
         undefined,
-        Array [
+        <div
+          className=" className"
+>
           <button
-            className="undefined undefined undefined "
-            onClick={[Function]}
-/>,
+                    className="undefined undefined undefined "
+                    onClick={[Function]}
+                    state="closed"
+          />
           <button
-            className="undefined undefined undefined "
-            onClick={[Function]}
-/>,
-        ],
+                    className="undefined undefined undefined "
+                    onClick={[Function]}
+                    state="closed"
+          />
+</div>,
       ],
-      "className": "className ",
     },
     "ref": null,
     "rendered": Array [
       undefined,
       Object {
         "instance": null,
-        "key": "closed",
+        "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "className": "undefined undefined undefined ",
-          "onClick": [Function],
+          "children": Array [
+            undefined,
+            Array [
+              <button
+                className="undefined undefined undefined "
+                onClick={[Function]}
+                state="closed"
+/>,
+              <button
+                className="undefined undefined undefined "
+                onClick={[Function]}
+                state="closed"
+/>,
+            ],
+          ],
+          "className": " className",
         },
         "ref": null,
-        "rendered": null,
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": "open",
-        "nodeType": "host",
-        "props": Object {
-          "className": "undefined undefined undefined ",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "button",
+        "rendered": Array [
+          undefined,
+          Object {
+            "instance": null,
+            "key": "closed",
+            "nodeType": "host",
+            "props": Object {
+              "className": "undefined undefined undefined ",
+              "onClick": [Function],
+              "state": "closed",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": "open",
+            "nodeType": "host",
+            "props": Object {
+              "className": "undefined undefined undefined ",
+              "onClick": [Function],
+              "state": "closed",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "button",
+          },
+        ],
+        "type": "div",
       },
     ],
-    "type": "div",
+    "type": Symbol(react.fragment),
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
         "children": Array [
           undefined,
-          Array [
+          <div
+            className=" className"
+>
             <button
-              className="undefined undefined undefined "
-              onClick={[Function]}
-/>,
+                        className="undefined undefined undefined "
+                        onClick={[Function]}
+                        state="closed"
+            />
             <button
-              className="undefined undefined undefined "
-              onClick={[Function]}
-/>,
-          ],
+                        className="undefined undefined undefined "
+                        onClick={[Function]}
+                        state="closed"
+            />
+</div>,
         ],
-        "className": "className ",
       },
       "ref": null,
       "rendered": Array [
         undefined,
         Object {
           "instance": null,
-          "key": "closed",
+          "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "undefined undefined undefined ",
-            "onClick": [Function],
+            "children": Array [
+              undefined,
+              Array [
+                <button
+                  className="undefined undefined undefined "
+                  onClick={[Function]}
+                  state="closed"
+/>,
+                <button
+                  className="undefined undefined undefined "
+                  onClick={[Function]}
+                  state="closed"
+/>,
+              ],
+            ],
+            "className": " className",
           },
           "ref": null,
-          "rendered": null,
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": "open",
-          "nodeType": "host",
-          "props": Object {
-            "className": "undefined undefined undefined ",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "button",
+          "rendered": Array [
+            undefined,
+            Object {
+              "instance": null,
+              "key": "closed",
+              "nodeType": "host",
+              "props": Object {
+                "className": "undefined undefined undefined ",
+                "onClick": [Function],
+                "state": "closed",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": "open",
+              "nodeType": "host",
+              "props": Object {
+                "className": "undefined undefined undefined ",
+                "onClick": [Function],
+                "state": "closed",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "button",
+            },
+          ],
+          "type": "div",
         },
       ],
-      "type": "div",
+      "type": Symbol(react.fragment),
     },
   ],
   Symbol(enzyme.__options__): Object {
@@ -285,16 +595,20 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
       "children": Array [
         undefined,
-        <button
-          className="undefined "
-          onClick={[Function]}
-/>,
+        <div
+          className=" "
+>
+          <button
+                    className="undefined "
+                    onClick={[Function]}
+                    state="closed"
+          />
+</div>,
       ],
-      "className": " ",
     },
     "ref": null,
     "rendered": Array [
@@ -304,30 +618,56 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "className": "undefined ",
-          "onClick": [Function],
+          "children": Array [
+            undefined,
+            <button
+              className="undefined "
+              onClick={[Function]}
+              state="closed"
+/>,
+          ],
+          "className": " ",
         },
         "ref": null,
-        "rendered": null,
-        "type": "button",
+        "rendered": Array [
+          undefined,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "undefined ",
+              "onClick": [Function],
+              "state": "closed",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "button",
+          },
+        ],
+        "type": "div",
       },
     ],
-    "type": "div",
+    "type": Symbol(react.fragment),
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
         "children": Array [
           undefined,
-          <button
-            className="undefined "
-            onClick={[Function]}
-/>,
+          <div
+            className=" "
+>
+            <button
+                        className="undefined "
+                        onClick={[Function]}
+                        state="closed"
+            />
+</div>,
         ],
-        "className": " ",
       },
       "ref": null,
       "rendered": Array [
@@ -337,15 +677,37 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "undefined ",
-            "onClick": [Function],
+            "children": Array [
+              undefined,
+              <button
+                className="undefined "
+                onClick={[Function]}
+                state="closed"
+/>,
+            ],
+            "className": " ",
           },
           "ref": null,
-          "rendered": null,
-          "type": "button",
+          "rendered": Array [
+            undefined,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "undefined ",
+                "onClick": [Function],
+                "state": "closed",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "button",
+            },
+          ],
+          "type": "div",
         },
       ],
-      "type": "div",
+      "type": Symbol(react.fragment),
     },
   ],
   Symbol(enzyme.__options__): Object {

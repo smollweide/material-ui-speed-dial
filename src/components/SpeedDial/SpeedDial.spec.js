@@ -68,6 +68,34 @@ describe('SpeedDial', () => {
 			done();
 		}, 500);
 	});
+	it('snapshot: renderBackdrop', () => {
+		const _props = {
+			...props,
+			renderBackdrop: propsBackdrop => (
+				<div className="backdrop" {...{ ...propsBackdrop, className: `${propsBackdrop.className} backdrop` }} />
+			),
+		};
+		const tree = shallow(<SpeedDial {..._props} />);
+		expect(tree).toMatchSnapshot();
+		expect(tree.find('.backdrop').length).toBe(1);
+	});
+	it('simulate: close by backdrop', done => {
+		const _props = {
+			...props,
+			renderBackdrop: propsBackdrop => (
+				<div className="backdrop" {...{ ...propsBackdrop, className: `${propsBackdrop.className} backdrop` }} />
+			),
+		};
+		const tree = shallow(<SpeedDial {..._props} />);
+		tree.setState({
+			state: 'opened',
+		});
+		tree.find('.backdrop').simulate('click');
+		setTimeout(() => {
+			expect(tree.state('state')).toBe('closed');
+			done();
+		}, 500);
+	});
 	it('unmount should work without an error while animation', done => {
 		const _props = { ...props };
 		const tree = shallow(<SpeedDial {..._props} />);

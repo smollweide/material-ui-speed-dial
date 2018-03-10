@@ -1,6 +1,6 @@
 // @flow
 
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { withStyles } from 'material-ui/styles';
 import styles from './SpeedDial.styles';
 import type { ClassesType } from './SpeedDial.styles';
@@ -74,11 +74,13 @@ export class SpeedDial extends Component<SpeedDialAllPropsType, SpeedDialStateTy
 				{
 					className: `${classes.button} ${preset.button}`,
 					onClick: state === STATE.OPENED ? this.handleClose : this.handleOpen,
+					state,
 				},
 				{
 					className: `${classes.buttonIcon} ${classes.buttonIconSingle} ${
 						classes[`buttonIconSingle--state-${state}`]
 					}`,
+					state,
 				}
 			);
 		}
@@ -91,11 +93,13 @@ export class SpeedDial extends Component<SpeedDialAllPropsType, SpeedDialStateTy
 						preset.button
 					}`,
 					onClick: this.handleOpen,
+					state,
 				},
 				{
 					className: `${classes.buttonIcon} ${classes.buttonClosedIcon} ${
 						classes[`buttonClosedIcon--state-${state}`]
 					}`,
+					state,
 				}
 			),
 			renderOpenedButton(
@@ -105,31 +109,42 @@ export class SpeedDial extends Component<SpeedDialAllPropsType, SpeedDialStateTy
 						preset.button
 					}`,
 					onClick: this.handleClose,
+					state,
 				},
 				{
 					className: `${classes.buttonIcon} ${classes.buttonOpenedIcon} ${
 						classes[`buttonOpenedIcon--state-${state}`]
 					}`,
+					state,
 				}
 			),
 		];
 	}
 
 	render(): React$Element<*> {
-		const { classes, preset, className, renderList, children } = this.props;
+		const { classes, preset, className, renderList, renderBackdrop, children } = this.props;
 		const { state } = this.state;
 		return (
-			<div className={`${className || ''} ${preset.root}`}>
-				{renderList({
-					className: `${classes.list} ${classes[`list--state-${state}`]} ${preset.list}`,
-					children: children({
+			<Fragment>
+				{renderBackdrop &&
+					renderBackdrop({
+						className: `${preset.backdrop}`,
 						state,
-						preset,
-						className: `${preset.item}`,
-					}),
-				})}
-				{this.renderButton()}
-			</div>
+						onClick: this.handleClose,
+					})}
+				<div className={`${preset.root} ${className || ''}`}>
+					{renderList({
+						className: `${classes.list} ${classes[`list--state-${state}`]} ${preset.list}`,
+						children: children({
+							state,
+							preset,
+							className: `${preset.item}`,
+						}),
+						state,
+					})}
+					{this.renderButton()}
+				</div>
+			</Fragment>
 		);
 	}
 }

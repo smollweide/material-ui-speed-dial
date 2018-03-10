@@ -1,0 +1,34 @@
+// @flow
+import type { StylesType, ThemeType } from '../../types/styles';
+
+let stylesRaw;
+
+export const styles = (theme: ThemeType): StylesType => {
+	stylesRaw = {
+		root: {
+			position: 'fixed',
+			backgroundColor: theme.palette.grey['200'],
+			zIndex: theme.zIndex.appBar + 1,
+			transition: 'all 0.5s',
+			width: '100%',
+			height: '100%',
+		},
+		'root--state-closed': {
+			opacity: 0,
+		},
+		'root--state-opening': {
+			opacity: 0.8,
+		},
+		'root--state-opened': {
+			opacity: 0.8,
+		},
+		'root--state-closing': {
+			opacity: 0,
+		},
+	};
+	return stylesRaw;
+};
+
+export type ClassesType = { [key: string]: string };
+
+export default styles;

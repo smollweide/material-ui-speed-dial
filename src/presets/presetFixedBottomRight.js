@@ -9,6 +9,7 @@ const styles = (theme: ThemeType): PresetRawType => {
 			position: 'fixed',
 			bottom: 0,
 			right: 0,
+			zIndex: theme.zIndex.appBar + 2,
 		},
 		button: {
 			position: 'absolute',
@@ -33,6 +34,10 @@ const styles = (theme: ThemeType): PresetRawType => {
 			paddingBottom: theme.spacing.unit * 0.5,
 			paddingLeft: theme.spacing.unit,
 			marginRight: theme.spacing.unit * 9,
+		},
+		backdrop: {
+			bottom: 0,
+			right: 0,
 		},
 	};
 };

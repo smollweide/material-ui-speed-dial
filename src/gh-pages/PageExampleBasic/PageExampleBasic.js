@@ -8,7 +8,7 @@ import Avatar from 'material-ui/Avatar';
 import AddIcon from 'material-ui-icons/Add';
 import EditIcon from 'material-ui-icons/Edit';
 
-import SpeedDial, { SpeedDialItem, SpeedDialLabel } from '../../speed-dial';
+import SpeedDial, { SpeedDialItem, SpeedDialLabel, SpeedDialBackdrop } from '../../speed-dial';
 import presetFixedBottomRight from '../../presets/presetFixedBottomRight';
 import TemplateExample from '../TemplateExample/TemplateExample';
 
@@ -22,6 +22,7 @@ import type {
 	RenderListPropsType,
 	RenderAvatarPropsType,
 	RenderLabelPropsType,
+	RenderBackdropPropsType,
 } from '../../../material-ui-speed-dial.js.flow';
 import type { ClassesType } from '../../types/styles';
 
@@ -48,6 +49,7 @@ const PageExampleBasic = ({ classes }: PageExampleBasicPropsType) => {
 					</Button>
 				)}
 				renderList={(props: RenderListPropsType) => <ul {...props} />}
+				renderBackdrop={(props: RenderBackdropPropsType) => <SpeedDialBackdrop {...props} />}
 			>
 				{(props: RenderPropsType): Array<React$Element<*>> => [
 					<SpeedDialItem

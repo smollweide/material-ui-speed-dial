@@ -24,10 +24,12 @@ export const SpeedDialItem = ({
 		<li className={`${classes.root} ${className !== undefined ? className : ''}`}>
 			<a className={`${classes.link} ${classes[`link--state-${state}`]}`}>
 				{children({
+					state,
 					className: `${preset.label}`,
 				})}
 				{renderAvatar &&
 					renderAvatar({
+						state,
 						className: `${classes.avatar} ${preset.avatar}`,
 					})}
 			</a>

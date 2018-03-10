@@ -52,6 +52,9 @@ export type ThemeType = {
 		background: {
 			[key: string]: ThemeValueType,
 		},
+		grey: {
+			[key: string]: ThemeValueType,
+		},
 	},
 	breakpoints: {
 		up: (value: string) => ThemeValueType,
