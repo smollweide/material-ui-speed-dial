@@ -96,6 +96,20 @@ describe('SpeedDial', () => {
 			done();
 		}, 500);
 	});
+	it('snapshot: renderOuterRimButton', () => {
+		const _props = {
+			...props,
+			renderOuterRimButton: propsOuterRimButtom => (
+				<div
+					className="backdrop"
+					{...{ ...propsOuterRimButtom, className: `${propsOuterRimButtom.className} outerRimButtom` }}
+				/>
+			),
+		};
+		const tree = shallow(<SpeedDial {..._props} />);
+		expect(tree).toMatchSnapshot();
+		expect(tree.find('.outerRimButtom').length).toBe(1);
+	});
 	it('unmount should work without an error while animation', done => {
 		const _props = { ...props };
 		const tree = shallow(<SpeedDial {..._props} />);

@@ -122,7 +122,7 @@ export class SpeedDial extends Component<SpeedDialAllPropsType, SpeedDialStateTy
 	}
 
 	render(): React$Element<*> {
-		const { classes, preset, className, renderList, renderBackdrop, children } = this.props;
+		const { classes, preset, className, renderList, renderBackdrop, renderOuterRimButton, children } = this.props;
 		const { state } = this.state;
 		return (
 			<Fragment>
@@ -133,6 +133,19 @@ export class SpeedDial extends Component<SpeedDialAllPropsType, SpeedDialStateTy
 						onClick: this.handleClose,
 					})}
 				<div className={`${preset.root} ${className || ''}`}>
+					{renderOuterRimButton &&
+						renderOuterRimButton(
+							{
+								className: `${classes.button} ${classes.buttonOuterRim} ${
+									classes[`buttonOuterRim--state-${state}`]
+								} ${preset.buttonOuterRim}`,
+								state,
+							},
+							{
+								className: '',
+								state,
+							}
+						)}
 					{renderList({
 						className: `${classes.list} ${classes[`list--state-${state}`]} ${preset.list}`,
 						children: children({

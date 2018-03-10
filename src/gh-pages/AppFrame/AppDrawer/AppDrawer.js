@@ -29,7 +29,10 @@ export type AppDrawerStateType = {
 const ListExamples = withRouter(({ history }: ContextRouterType): React$Element<*> => (
 	<Fragment>
 		<ListItem button onClick={() => history.push('/example-basic')}>
-			<ListItemText primary="Fixed bottom right" />
+			<ListItemText primary="Basic" />
+		</ListItem>
+		<ListItem button onClick={() => history.push('/example-outer-rim-button')}>
+			<ListItemText primary="Outer rim button" />
 		</ListItem>
 	</Fragment>
 ));

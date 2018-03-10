@@ -16,6 +16,11 @@ const styles = (theme: ThemeType): PresetRawType => {
 			bottom: theme.spacing.unit * 2,
 			right: theme.spacing.unit * 2,
 		},
+		buttonOuterRim: {
+			position: 'absolute',
+			bottom: theme.spacing.unit * 10.8,
+			right: theme.spacing.unit * 3,
+		},
 		list: {
 			bottom: theme.spacing.unit * 2.5,
 			right: 0,

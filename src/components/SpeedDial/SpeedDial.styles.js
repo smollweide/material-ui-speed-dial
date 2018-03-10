@@ -72,6 +72,21 @@ export const styles = (): StylesType => {
 			transform: 'rotate(-180deg)',
 		},
 
+		// BUTTON OUTER RIM
+		buttonOuterRim: {},
+		'buttonOuterRim--state-closed': {},
+		'buttonOuterRim--state-opening': {
+			opacity: 0,
+			pointerEvents: 'none',
+		},
+		'buttonOuterRim--state-opened': {
+			opacity: 0,
+			pointerEvents: 'none',
+		},
+		'buttonOuterRim--state-closing': {
+			opacity: 1,
+		},
+
 		list: {
 			transition: 'all 0.2s',
 			position: 'absolute',

@@ -8,6 +8,7 @@ import AppFrame from '../AppFrame/AppFrame';
 import PageHome from '../PageHome/PageHome';
 import PageGettingStarted from '../PageGettingStarted/PageGettingStarted';
 import PageExampleBasic from '../PageExampleBasic/PageExampleBasic';
+import PageExampleOuterRimButton from '../PageExampleOuterRimButton/PageExampleOuterRimButton';
 
 export const PALETTE_TYPE = {
 	LIGHT: 'light',
@@ -64,6 +65,7 @@ class App extends Component<AppPropsType, AppStateType> {
 						<Route exact component={PageHome} path="/" />
 						<Route exact component={PageGettingStarted} path="/getting-started" />
 						<Route exact component={PageExampleBasic} path="/example-basic" />
+						<Route exact component={PageExampleOuterRimButton} path="/example-outer-rim-button" />
 					</AppFrame>
 				</AppWrapper>
 			</HashRouter>

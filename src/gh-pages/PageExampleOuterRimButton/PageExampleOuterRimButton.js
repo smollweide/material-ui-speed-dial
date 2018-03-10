@@ -7,6 +7,7 @@ import Avatar from 'material-ui/Avatar';
 
 import AddIcon from 'material-ui-icons/Add';
 import EditIcon from 'material-ui-icons/Edit';
+import LinkIcon from 'material-ui-icons/Link';
 
 import SpeedDial, { SpeedDialItem, SpeedDialLabel, SpeedDialBackdrop } from '../../speed-dial';
 import presetFixedBottomRight from '../../presets/presetFixedBottomRight';
@@ -19,6 +20,8 @@ import type {
 	RenderButtonIconPropsType,
 	RenderOpenedButtonPropsType,
 	RenderOpenedButtonIconPropsType,
+	RenderOuterRimButtonPropsType,
+	RenderOuterRimButtonIconPropsType,
 	RenderListPropsType,
 	RenderAvatarPropsType,
 	RenderLabelPropsType,
@@ -46,6 +49,14 @@ const PageExampleBasic = ({ classes }: PageExampleBasicPropsType) => {
 				) => (
 					<Button {...props} variant="fab" color="secondary" aria-label="edit">
 						<EditIcon {...propsIcon} />
+					</Button>
+				)}
+				renderOuterRimButton={(
+					props: RenderOuterRimButtonPropsType,
+					propsIcon: RenderOuterRimButtonIconPropsType
+				) => (
+					<Button {...props} mini variant="fab" color="primary" aria-label="add-link">
+						<LinkIcon {...propsIcon} />
 					</Button>
 				)}
 				renderList={(props: RenderListPropsType) => <ul {...props} />}
