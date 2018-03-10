@@ -15,15 +15,18 @@ export const styles = (theme: ThemeType): StylesType => {
 		},
 		'root--state-closed': {
 			opacity: 0,
+			pointerEvents: 'none',
 		},
 		'root--state-opening': {
 			opacity: 0.8,
+			pointerEvents: 'none',
 		},
 		'root--state-opened': {
 			opacity: 0.8,
 		},
 		'root--state-closing': {
 			opacity: 0,
+			pointerEvents: 'none',
 		},
 	};
 	return stylesRaw;
