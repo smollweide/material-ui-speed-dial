@@ -81,6 +81,7 @@ export default withStyles(presetFixedBottomRight)(MyMaterialUiSpeedDial);
 - [Basic](https://smollweide.github.io/material-ui-speed-dial/#/example-basic)
 - [Outer rim button](https://smollweide.github.io/material-ui-speed-dial/#/example-outer-rim-button)
 - [Close onClick item](https://smollweide.github.io/material-ui-speed-dial/#/example-close-on-click-item)
+- [Bottom left](https://smollweide.github.io/material-ui-speed-dial/#/example-bottom-left)
 
 ## Shields
 [![coverage status](https://coveralls.io/repos/github/smollweide/material-ui-speed-dial/badge.svg?branch=master)](https://coveralls.io/github/smollweide/material-ui-speed-dial?branch=master)

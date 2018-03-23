@@ -8,6 +8,7 @@ import AppFrame from '../AppFrame/AppFrame';
 import PageHome from '../PageHome/PageHome';
 import PageGettingStarted from '../PageGettingStarted/PageGettingStarted';
 import PageExampleBasic from '../PageExampleBasic/PageExampleBasic';
+import PageExampleBottomLeft from '../PageExampleBottomLeft/PageExampleBottomLeft';
 import PageExampleOuterRimButton from '../PageExampleOuterRimButton/PageExampleOuterRimButton';
 import PageExampleCloseOnClickItem from '../PageExampleCloseOnClickItem/PageExampleCloseOnClickItem';
 
@@ -68,6 +69,7 @@ class App extends Component<AppPropsType, AppStateType> {
 						<Route exact component={PageExampleBasic} path="/example-basic" />
 						<Route exact component={PageExampleOuterRimButton} path="/example-outer-rim-button" />
 						<Route exact component={PageExampleCloseOnClickItem} path="/example-close-on-click-item" />
+						<Route exact component={PageExampleBottomLeft} path="/example-bottom-left" />
 					</AppFrame>
 				</AppWrapper>
 			</HashRouter>
