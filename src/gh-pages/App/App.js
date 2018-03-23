@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import { HashRouter, Route } from 'react-router-dom';
-import Reboot from 'material-ui/Reboot';
+import CssBaseline from 'material-ui/CssBaseline';
 
 import AppWrapper from '../AppWrapper/AppWrapper';
 import AppFrame from '../AppFrame/AppFrame';
@@ -56,7 +56,7 @@ class App extends Component<AppPropsType, AppStateType> {
 		return (
 			<HashRouter>
 				<AppWrapper direction={this.state.direction} paletteType={this.state.paletteType}>
-					<Reboot />
+					<CssBaseline />
 					<AppFrame
 						onToggleDirection={this.handleToggleDirection}
 						onTogglePaletteType={this.handleTogglePaletteType}

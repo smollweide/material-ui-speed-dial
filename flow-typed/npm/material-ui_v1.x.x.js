@@ -1583,7 +1583,7 @@ declare module 'material-ui/styles/zIndex' {
 	declare module.exports: Object;
 }
 
-declare module 'material-ui/Reboot' {
+declare module 'material-ui/CssBaseline' {
 	declare module.exports: React$ComponentType<Object>;
 }
 declare module 'material-ui/svg-icons/ArrowDownward' {
