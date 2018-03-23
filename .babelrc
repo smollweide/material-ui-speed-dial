@@ -18,7 +18,7 @@
 		"react"
 	],
 	"plugins": [
-		["transform-replace-object-assign", "simple-assign"],
+		["transform-replace-object-assign", { "moduleSpecifier": "simple-assign" }],
 		"transform-dev-warning",
 		"syntax-flow",
 		"transform-flow-strip-types"
@@ -29,7 +29,7 @@
 		},
 		"docs-production": {
 			"plugins": [
-				["transform-replace-object-assign", "simple-assign"],
+				["transform-replace-object-assign", { "moduleSpecifier": "simple-assign" }],
 				"transform-react-remove-prop-types",
 				"transform-react-constant-elements",
 				"transform-react-inline-elements",
