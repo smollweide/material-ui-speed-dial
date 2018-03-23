@@ -35,7 +35,10 @@ export type PageExampleBasicPropsType = {
 
 const PageExampleBasic = ({ classes }: PageExampleBasicPropsType) => {
 	return (
-		<TemplateExample title="Outer rim button example">
+		<TemplateExample
+			title="Outer rim button example"
+			hrefCode="https://github.com/smollweide/material-ui-speed-dial/blob/master/src/gh-pages/PageExampleOuterRimButton/PageExampleOuterRimButton.js"
+		>
 			<SpeedDial
 				preset={classes}
 				renderButton={(props: RenderButtonPropsType, propsIcon: RenderButtonIconPropsType) => (

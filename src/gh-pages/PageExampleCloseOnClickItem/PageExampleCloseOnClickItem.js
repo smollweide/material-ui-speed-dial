@@ -32,7 +32,10 @@ export type PageExampleCloseOnClickItemPropsType = {
 
 const PageExampleCloseOnClickItem = ({ classes }: PageExampleCloseOnClickItemPropsType) => {
 	return (
-		<TemplateExample title="Close onClick item example">
+		<TemplateExample
+			title="Close onClick item example"
+			hrefCode="https://github.com/smollweide/material-ui-speed-dial/blob/master/src/gh-pages/PageExampleCloseOnClickItem/PageExampleCloseOnClickItem.js"
+		>
 			<SpeedDial
 				preset={classes}
 				renderButton={(props: RenderButtonPropsType, propsIcon: RenderButtonIconPropsType) => (
