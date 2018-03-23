@@ -15,6 +15,7 @@ import TemplateExample from '../TemplateExample/TemplateExample';
 
 // types
 import type {
+	PresetType,
 	RenderPropsType,
 	RenderButtonPropsType,
 	RenderButtonIconPropsType,
@@ -27,10 +28,9 @@ import type {
 	RenderLabelPropsType,
 	RenderBackdropPropsType,
 } from '../../../material-ui-speed-dial.js.flow';
-import type { ClassesType } from '../../types/styles';
 
 export type PageExampleBasicPropsType = {
-	classes: ClassesType,
+	classes: PresetType,
 };
 
 const PageExampleBasic = ({ classes }: PageExampleBasicPropsType) => {
@@ -66,18 +66,14 @@ const PageExampleBasic = ({ classes }: PageExampleBasicPropsType) => {
 					<SpeedDialItem
 						{...props}
 						key="c"
-						renderAvatar={(propsAvatar: RenderAvatarPropsType) => (
-							<Avatar {...propsAvatar} alt="Eric Hoffman" src="http://lorempixel.com/80/80/people/3" />
-						)}
+						renderAvatar={(propsAvatar: RenderAvatarPropsType) => <Avatar {...propsAvatar}>C</Avatar>}
 					>
 						{(propsLabel: RenderLabelPropsType) => <SpeedDialLabel {...propsLabel} text="Eric Hoffman" />}
 					</SpeedDialItem>,
 					<SpeedDialItem
 						{...props}
 						key="b"
-						renderAvatar={(propsAvatar: RenderAvatarPropsType) => (
-							<Avatar {...propsAvatar} alt="Grace Ng" src="http://lorempixel.com/80/80/people/9" />
-						)}
+						renderAvatar={(propsAvatar: RenderAvatarPropsType) => <Avatar {...propsAvatar}>B</Avatar>}
 					>
 						{(propsLabel: RenderLabelPropsType) => <SpeedDialLabel {...propsLabel} text="Grace Ng" />}
 					</SpeedDialItem>,

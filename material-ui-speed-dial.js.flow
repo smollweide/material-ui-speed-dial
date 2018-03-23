@@ -1,6 +1,6 @@
 // @flow
 
-export type PresetRawType = {
+export type PresetRawType = {|
 	root: { [key: string]: number | string },
 	button: { [key: string]: number | string },
 	buttonOuterRim: { [key: string]: number | string },
@@ -10,9 +10,9 @@ export type PresetRawType = {
 	avatar: { [key: string]: number | string },
 	label: { [key: string]: number | string },
 	backdrop: { [key: string]: number | string },
-};
+|};
 
-export type PresetType = {
+export type PresetType = {|
 	root: string,
 	button: string,
 	buttonOuterRim: string,
@@ -22,85 +22,89 @@ export type PresetType = {
 	avatar: string,
 	label: string,
 	backdrop: string,
-};
+|};
 
 export type StateEnumType = 'closed' | 'opening' | 'opened' | 'closing';
-export type SpeedDialStateType = {
+export type SpeedDialStateType = {|
 	state: StateEnumType,
-};
+|};
 
-export type RenderPropsType = {
+export type RenderPropsType = {|
 	state: StateEnumType,
 	className: string,
-};
-export type RenderButtonPropsType = {
+	preset: PresetType,
+	handleClose: () => void,
+|};
+export type RenderButtonPropsType = {|
 	key?: string,
 	className: string,
 	onClick: () => void,
 	state: StateEnumType,
-};
-export type RenderButtonIconPropsType = {
+|};
+export type RenderButtonIconPropsType = {|
 	className: string,
 	state: StateEnumType,
-};
-export type RenderOpenedButtonPropsType = {
+|};
+export type RenderOpenedButtonPropsType = {|
 	key: string,
 	className: string,
 	onClick: () => void,
 	state: StateEnumType,
-};
-export type RenderOpenedButtonIconPropsType = {
+|};
+export type RenderOpenedButtonIconPropsType = {|
 	className: string,
 	state: StateEnumType,
-};
-export type RenderOuterRimButtonPropsType = {
+|};
+export type RenderOuterRimButtonPropsType = {|
 	className: string,
 	state: StateEnumType,
-};
-export type RenderOuterRimButtonIconPropsType = {
+|};
+export type RenderOuterRimButtonIconPropsType = {|
 	className: string,
 	state: StateEnumType,
-};
-export type RenderListPropsType = {
+|};
+export type RenderListPropsType = {|
 	children: React$Node,
 	className: string,
 	state: StateEnumType,
-};
-export type RenderBackdropPropsType = {
-	className: string,
-	state: StateEnumType,
-};
-
-export type RenderAvatarPropsType = {
-	className: string,
-	state: StateEnumType,
-};
-export type RenderLabelPropsType = {
-	className: string,
-	state: StateEnumType,
-};
-
-export type SpeedDialLabelPropsType = {
-	className: string,
-	text: string,
-	state: StateEnumType,
-};
-
-export type SpeedDialBackdropPropsType = {
+|};
+export type RenderBackdropPropsType = {|
 	className: string,
 	state: StateEnumType,
 	onClick: (event: SyntheticMouseEvent<HTMLDivElement>) => void,
-};
+|};
 
-export type SpeedDialItemPropsType = {
+export type RenderAvatarPropsType = {|
+	className: string,
+	state: StateEnumType,
+|};
+export type RenderLabelPropsType = {|
+	className: string,
+	state: StateEnumType,
+|};
+
+export type SpeedDialLabelPropsType = {|
+	className: string,
+	text: string,
+	state: StateEnumType,
+|};
+
+export type SpeedDialBackdropPropsType = {|
+	className: string,
+	state: StateEnumType,
+	onClick: (event: SyntheticMouseEvent<HTMLDivElement>) => void,
+|};
+
+export type SpeedDialItemPropsType = {|
 	className: string,
 	preset: PresetType,
 	state: StateEnumType,
 	renderAvatar?: (props: RenderAvatarPropsType) => React$Element<*>,
 	children: (props: RenderLabelPropsType) => React$Element<*>,
-};
+	onClick: (event: SyntheticMouseEvent<HTMLDivElement>) => void,
+|};
 
-export type SpeedDialPropsType = {
+export type SpeedDialPropsType = {|
 	children: (props: RenderPropsType) => React$Node,
 	className?: string,
 	preset: PresetType,
@@ -116,4 +120,4 @@ export type SpeedDialPropsType = {
 	) => React$Element<*>,
 	renderList: (props: RenderListPropsType) => React$Element<*>,
 	renderBackdrop?: (props: RenderBackdropPropsType) => React$Element<*>,
-};
+|};

@@ -26,13 +26,13 @@ import type {
 	RenderBackdropPropsType,
 } from '../../../material-ui-speed-dial.js.flow';
 
-export type PageExampleBasicPropsType = {
+export type PageExampleCloseOnClickItemPropsType = {
 	classes: PresetType,
 };
 
-const PageExampleBasic = ({ classes }: PageExampleBasicPropsType) => {
+const PageExampleCloseOnClickItem = ({ classes }: PageExampleCloseOnClickItemPropsType) => {
 	return (
-		<TemplateExample title="Basic example">
+		<TemplateExample title="Close onClick item example">
 			<SpeedDial
 				preset={classes}
 				renderButton={(props: RenderButtonPropsType, propsIcon: RenderButtonIconPropsType) => (
@@ -56,6 +56,7 @@ const PageExampleBasic = ({ classes }: PageExampleBasicPropsType) => {
 						{...props}
 						key="c"
 						renderAvatar={(propsAvatar: RenderAvatarPropsType) => <Avatar {...propsAvatar}>C</Avatar>}
+						onClick={props.handleClose}
 					>
 						{(propsLabel: RenderLabelPropsType) => <SpeedDialLabel {...propsLabel} text="Eric Hoffman" />}
 					</SpeedDialItem>,
@@ -63,10 +64,15 @@ const PageExampleBasic = ({ classes }: PageExampleBasicPropsType) => {
 						{...props}
 						key="b"
 						renderAvatar={(propsAvatar: RenderAvatarPropsType) => <Avatar {...propsAvatar}>B</Avatar>}
+						onClick={props.handleClose}
 					>
 						{(propsLabel: RenderLabelPropsType) => <SpeedDialLabel {...propsLabel} text="Grace Ng" />}
 					</SpeedDialItem>,
-					<SpeedDialItem {...{ ...props, className: `${props.className} ${classes.firstItem}` }} key="a">
+					<SpeedDialItem
+						{...{ ...props, className: `${props.className} ${classes.firstItem}` }}
+						key="a"
+						onClick={props.handleClose}
+					>
 						{(propsLabel: RenderLabelPropsType) => <SpeedDialLabel {...propsLabel} text="Edit" />}
 					</SpeedDialItem>,
 				]}
@@ -74,6 +80,6 @@ const PageExampleBasic = ({ classes }: PageExampleBasicPropsType) => {
 		</TemplateExample>
 	);
 };
-PageExampleBasic.displayName = 'PageExampleBasic';
+PageExampleCloseOnClickItem.displayName = 'PageExampleBasic';
 
-export default withStyles(presetFixedBottomRight)(PageExampleBasic);
+export default withStyles(presetFixedBottomRight)(PageExampleCloseOnClickItem);

@@ -34,6 +34,9 @@ const ListExamples = withRouter(({ history }: ContextRouterType): React$Element<
 		<ListItem button onClick={() => history.push('/example-outer-rim-button')}>
 			<ListItemText primary="Outer rim button" />
 		</ListItem>
+		<ListItem button onClick={() => history.push('/example-close-on-click-item')}>
+			<ListItemText primary="Close onClick item" />
+		</ListItem>
 	</Fragment>
 ));
 ListExamples.displayName = 'ListExamples';

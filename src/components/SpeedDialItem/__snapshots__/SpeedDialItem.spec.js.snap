@@ -35,6 +35,7 @@ ShallowWrapper {
     "props": Object {
       "children": <a
         className="undefined undefined"
+        onClick={undefined}
       />,
       "className": "undefined ",
     },
@@ -49,6 +50,7 @@ ShallowWrapper {
           undefined,
         ],
         "className": "undefined undefined",
+        "onClick": undefined,
       },
       "ref": null,
       "rendered": Array [
@@ -67,6 +69,7 @@ ShallowWrapper {
       "props": Object {
         "children": <a
           className="undefined undefined"
+          onClick={undefined}
         />,
         "className": "undefined ",
       },
@@ -81,6 +84,7 @@ ShallowWrapper {
             undefined,
           ],
           "className": "undefined undefined",
+          "onClick": undefined,
         },
         "ref": null,
         "rendered": Array [
@@ -138,6 +142,7 @@ ShallowWrapper {
     "props": Object {
       "children": <a
         className="undefined undefined"
+        onClick={undefined}
       >
         <a
           className="undefined "
@@ -160,6 +165,7 @@ ShallowWrapper {
           />,
         ],
         "className": "undefined undefined",
+        "onClick": undefined,
       },
       "ref": null,
       "rendered": Array [
@@ -189,6 +195,7 @@ ShallowWrapper {
       "props": Object {
         "children": <a
           className="undefined undefined"
+          onClick={undefined}
         >
           <a
             className="undefined "
@@ -211,6 +218,7 @@ ShallowWrapper {
             />,
           ],
           "className": "undefined undefined",
+          "onClick": undefined,
         },
         "ref": null,
         "rendered": Array [
@@ -278,6 +286,7 @@ ShallowWrapper {
     "props": Object {
       "children": <a
         className="undefined undefined"
+        onClick={undefined}
       />,
       "className": "undefined ",
     },
@@ -292,6 +301,7 @@ ShallowWrapper {
           undefined,
         ],
         "className": "undefined undefined",
+        "onClick": undefined,
       },
       "ref": null,
       "rendered": Array [
@@ -310,6 +320,7 @@ ShallowWrapper {
       "props": Object {
         "children": <a
           className="undefined undefined"
+          onClick={undefined}
         />,
         "className": "undefined ",
       },
@@ -324,6 +335,7 @@ ShallowWrapper {
             undefined,
           ],
           "className": "undefined undefined",
+          "onClick": undefined,
         },
         "ref": null,
         "rendered": Array [

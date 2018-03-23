@@ -19,10 +19,11 @@ export const SpeedDialItem = ({
 	className,
 	preset,
 	classes,
+	onClick,
 }: SpeedDialWithStylePropsType & SpeedDialItemPropsType): React$Element<*> => {
 	return (
 		<li className={`${classes.root} ${className !== undefined ? className : ''}`}>
-			<a className={`${classes.link} ${classes[`link--state-${state}`]}`}>
+			<a className={`${classes.link} ${classes[`link--state-${state}`]}`} onClick={onClick}>
 				{children({
 					state,
 					className: `${preset.label}`,

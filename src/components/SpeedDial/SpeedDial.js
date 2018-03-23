@@ -152,6 +152,7 @@ export class SpeedDial extends Component<SpeedDialAllPropsType, SpeedDialStateTy
 							state,
 							preset,
 							className: `${preset.item}`,
+							handleClose: this.handleClose,
 						}),
 						state,
 					})}

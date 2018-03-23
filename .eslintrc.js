@@ -7,6 +7,7 @@ module.exports = {
 	],
 	rules: {
 		'quote-props': 0,
+		'flowtype/require-parameter-type': 0,
 	},
 	globals: {
 		global: true,
