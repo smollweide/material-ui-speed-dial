@@ -83,6 +83,14 @@ export default withStyles(presetFixedBottomRight)(MyMaterialUiSpeedDial);
 - [Close onClick item](https://smollweide.github.io/material-ui-speed-dial/#/example-close-on-click-item)
 - [Bottom left](https://smollweide.github.io/material-ui-speed-dial/#/example-bottom-left)
 
+## Flow
+Import the flow lib from node_modules
+
+```
+[libs]
+./node_modules/@smollweide/material-ui-speed-dial/material-ui-speed-dial.js.flow
+```
+
 ## Shields
 [![coverage status](https://coveralls.io/repos/github/smollweide/material-ui-speed-dial/badge.svg?branch=master)](https://coveralls.io/github/smollweide/material-ui-speed-dial?branch=master)
 [![npm](https://img.shields.io/npm/v/@smollweide/material-ui-speed-dial.svg)](http://npm.im/@smollweide/material-ui-speed-dial)
