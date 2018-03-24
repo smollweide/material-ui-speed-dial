@@ -1,4 +1,5 @@
 // @flow
+/* eslint flowtype/type-id-match: 0*/
 
 export type PresetRawType = {|
 	root: { [key: string]: number | string },
@@ -83,28 +84,28 @@ export type RenderLabelPropsType = {|
 	state: StateEnumType,
 |};
 
-export type SpeedDialLabelPropsType = {|
+export type SpeedDialLabelPropsType = {
 	className: string,
 	text: string,
 	state: StateEnumType,
-|};
+};
 
-export type SpeedDialBackdropPropsType = {|
+export type SpeedDialBackdropPropsType = {
 	className: string,
 	state: StateEnumType,
 	onClick: (event: SyntheticMouseEvent<HTMLDivElement>) => void,
-|};
+};
 
-export type SpeedDialItemPropsType = {|
+export type SpeedDialItemPropsType = {
 	className: string,
 	preset: PresetType,
 	state: StateEnumType,
 	renderAvatar?: (props: RenderAvatarPropsType) => React$Element<*>,
 	children: (props: RenderLabelPropsType) => React$Element<*>,
-	onClick: (event: SyntheticMouseEvent<HTMLDivElement>) => void,
-|};
+	onClick?: (event: SyntheticMouseEvent<HTMLDivElement>) => void,
+};
 
-export type SpeedDialPropsType = {|
+export type SpeedDialPropsType = {
 	children: (props: RenderPropsType) => React$Node,
 	className?: string,
 	preset: PresetType,
@@ -120,4 +121,59 @@ export type SpeedDialPropsType = {|
 	) => React$Element<*>,
 	renderList: (props: RenderListPropsType) => React$Element<*>,
 	renderBackdrop?: (props: RenderBackdropPropsType) => React$Element<*>,
-|};
+};
+
+// mjs types
+declare module '@smollweide/material-ui-speed-dial/dist/mjs/components/SpeedDial/SpeedDial' {
+	declare export default class SpeedDial extends React$Component<SpeedDialPropsType, SpeedDialStateType> {}
+}
+declare module '@smollweide/material-ui-speed-dial/dist/mjs/components/SpeedDialItem/SpeedDialItem' {
+	declare export default class SpeedDialItem extends React$Component<SpeedDialItemPropsType> {}
+}
+declare module '@smollweide/material-ui-speed-dial/dist/mjs/components/SpeedDialBackdrop/SpeedDialBackdrop' {
+	declare export default class SpeedDialBackdrop extends React$Component<SpeedDialBackdropPropsType> {}
+}
+declare module '@smollweide/material-ui-speed-dial/dist/mjs/components/SpeedDialLabel/SpeedDialLabel' {
+	declare export default class SpeedDialLabel extends React$Component<SpeedDialLabelPropsType> {}
+}
+
+// js types
+declare module '@smollweide/material-ui-speed-dial/dist/components/SpeedDial/SpeedDial' {
+	declare export default class SpeedDial extends React$Component<SpeedDialPropsType, SpeedDialStateType> {}
+}
+declare module '@smollweide/material-ui-speed-dial/dist/components/SpeedDialItem/SpeedDialItem' {
+	declare export default class SpeedDialItem extends React$Component<SpeedDialItemPropsType> {}
+}
+declare module '@smollweide/material-ui-speed-dial/dist/components/SpeedDialBackdrop/SpeedDialBackdrop' {
+	declare export default class SpeedDialBackdrop extends React$Component<SpeedDialBackdropPropsType> {}
+}
+declare module '@smollweide/material-ui-speed-dial/dist/components/SpeedDialLabel/SpeedDialLabel' {
+	declare export default class SpeedDialLabel extends React$Component<SpeedDialLabelPropsType> {}
+}
+
+declare module '@smollweide/material-ui-speed-dial' {
+	declare export type $PresetRawType = PresetRawType;
+	declare export type $PresetType = PresetType;
+	declare export type $StateEnumType = StateEnumType;
+	declare export type $SpeedDialStateType = SpeedDialStateType;
+	declare export type $RenderPropsType = RenderPropsType;
+	declare export type $RenderButtonPropsType = RenderButtonPropsType;
+	declare export type $RenderButtonIconPropsType = RenderButtonIconPropsType;
+	declare export type $RenderOpenedButtonPropsType = RenderOpenedButtonPropsType;
+	declare export type $RenderOpenedButtonIconPropsType = RenderOpenedButtonIconPropsType;
+	declare export type $RenderOuterRimButtonPropsType = RenderOuterRimButtonPropsType;
+	declare export type $RenderOuterRimButtonIconPropsType = RenderOuterRimButtonIconPropsType;
+	declare export type $RenderListPropsType = RenderListPropsType;
+	declare export type $RenderBackdropPropsType = RenderBackdropPropsType;
+	declare export type $RenderAvatarPropsType = RenderAvatarPropsType;
+	declare export type $RenderLabelPropsType = RenderLabelPropsType;
+	declare export type $SpeedDialLabelPropsType = SpeedDialLabelPropsType;
+	declare export type $SpeedDialBackdropPropsType = SpeedDialBackdropPropsType;
+	declare export type $SpeedDialItemPropsType = SpeedDialItemPropsType;
+	declare export type $SpeedDialPropsType = SpeedDialPropsType;
+
+	declare export default class SpeedDial extends React$Component<$SpeedDialPropsType, $SpeedDialStateType> {}
+	declare export class SpeedDialItem extends React$Component<$SpeedDialItemPropsType> {}
+	declare export class SpeedDialBackdrop extends React$Component<$SpeedDialBackdropPropsType> {}
+	declare export class SpeedDialLabel extends React$Component<$SpeedDialLabelPropsType> {}
+}
