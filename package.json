@@ -61,7 +61,8 @@
   "files": [
     "dist",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "material-ui-speed-dial.js.flow"
   ],
   "prettier": {
     "useTabs": true,
