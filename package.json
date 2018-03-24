@@ -100,8 +100,9 @@
     ]
   },
   "peerDependencies": {
-    "material-ui": "1.x",
-    "material-ui-icons": "1.x",
+    "core-js": "2.x",
+    "material-ui": "1.x.x-beta.x",
+    "material-ui-icons": "1.x.x-beta.x",
     "react": "16.x",
     "react-dom": "16.x"
   },
