@@ -58,7 +58,7 @@ class ListStatic extends Component<ListStaticPropsType, ListStaticStateType> {
 		const { classes } = this.props;
 
 		return (
-			<Fragment className={classes.root}>
+			<div className={classes.root}>
 				<ListItem button onClick={this.handleClick}>
 					<ListItemText primary="Static position" />
 					{this.state.open ? <ExpandLess /> : <ExpandMore />}
@@ -69,7 +69,7 @@ class ListStatic extends Component<ListStaticPropsType, ListStaticStateType> {
 						<ListExamplesStatic />
 					</List>
 				</Collapse>
-			</Fragment>
+			</div>
 		);
 	}
 }
