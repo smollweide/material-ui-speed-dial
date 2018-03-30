@@ -11,6 +11,10 @@ import PageExampleBasic from '../PageExampleBasic/PageExampleBasic';
 import PageExampleBottomLeft from '../PageExampleBottomLeft/PageExampleBottomLeft';
 import PageExampleOuterRimButton from '../PageExampleOuterRimButton/PageExampleOuterRimButton';
 import PageExampleCloseOnClickItem from '../PageExampleCloseOnClickItem/PageExampleCloseOnClickItem';
+import PageExampleStaticUpwardsRightAligned from '../PageExampleStaticUpwardsRightAligned/PageExampleStaticUpwardsRightAligned';
+import PageExampleStaticUpwardsLeftAligned from '../PageExampleStaticUpwardsLeftAligned/PageExampleStaticUpwardsLeftAligned';
+import PageExampleStaticDownwardsRightAligned from '../PageExampleStaticDownwardsRightAligned/PageExampleStaticDownwardsRightAligned';
+import PageExampleStaticDownwardsLeftAligned from '../PageExampleStaticDownwardsLeftAligned/PageExampleStaticDownwardsLeftAligned';
 
 export const PALETTE_TYPE = {
 	LIGHT: 'light',
@@ -70,6 +74,26 @@ class App extends Component<AppPropsType, AppStateType> {
 						<Route exact component={PageExampleOuterRimButton} path="/example-outer-rim-button" />
 						<Route exact component={PageExampleCloseOnClickItem} path="/example-close-on-click-item" />
 						<Route exact component={PageExampleBottomLeft} path="/example-bottom-left" />
+						<Route
+							exact
+							component={PageExampleStaticUpwardsRightAligned}
+							path="/example-static-upwards-right-aligned"
+						/>
+						<Route
+							exact
+							component={PageExampleStaticUpwardsLeftAligned}
+							path="/example-static-upwards-left-aligned"
+						/>
+						<Route
+							exact
+							component={PageExampleStaticDownwardsRightAligned}
+							path="/example-static-downwards-right-aligned"
+						/>
+						<Route
+							exact
+							component={PageExampleStaticDownwardsLeftAligned}
+							path="/example-static-downwards-left-aligned"
+						/>
 					</AppFrame>
 				</AppWrapper>
 			</HashRouter>

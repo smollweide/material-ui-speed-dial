@@ -12,6 +12,7 @@ import Divider from 'material-ui/Divider';
 import { withRouter } from 'react-router';
 import type { ContextRouter as ContextRouterType } from 'react-router';
 import styles from './AppDrawer.styles';
+import ListStatic from './ListStatic/ListStatic';
 
 import type { ClassesType } from './AppDrawer.styles';
 export type AppDrawerHocPropsType = {
@@ -40,6 +41,7 @@ const ListExamples = withRouter(({ history }: ContextRouterType): React$Element<
 		<ListItem button onClick={() => history.push('/example-bottom-left')}>
 			<ListItemText primary="Bottom left" />
 		</ListItem>
+		<ListStatic />
 	</Fragment>
 ));
 ListExamples.displayName = 'ListExamples';
@@ -60,7 +62,7 @@ ListGettingStarted.displayName = 'ListGettingStarted';
 
 const AppDrawer = ({ isOpen, onClose, classes }: AppDrawerPropsType): React$Element<*> => (
 	<Drawer open={isOpen} onClose={onClose}>
-		<div tabIndex={0} role="button" onClick={onClose} onKeyDown={onClose}>
+		<div tabIndex={0} role="button" onKeyDown={onClose}>
 			<div className={classes.list}>
 				<List component="nav">
 					<ListHeader />

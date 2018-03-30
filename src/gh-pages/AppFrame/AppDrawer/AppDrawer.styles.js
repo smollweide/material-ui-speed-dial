@@ -6,7 +6,7 @@ let stylesRaw;
 export const styles = (): StylesType => {
 	stylesRaw = {
 		list: {
-			width: 250,
+			width: 310,
 		},
 		listFull: {
 			width: 'auto',

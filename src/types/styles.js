@@ -66,5 +66,7 @@ export type ThemeType = {
 		},
 		pxToRem: (value: number) => ThemeValueType,
 	},
-	shadows: Array<ThemeValueType>,
+	shadows: {
+		[key: string | number]: string,
+	},
 };
