@@ -5,8 +5,7 @@ import { withStyles } from 'material-ui/styles';
 import styles from './SpeedDialBackdrop.styles';
 
 // Types
-import type { SpeedDialBackdropPropsType } from '../../../material-ui-speed-dial.js.flow';
-import type { ClassesType } from '../../types/styles';
+import type { SpeedDialBackdropPropsType, ClassesType } from '../../../material-ui-speed-dial.js.flow';
 
 export type SpeedDialBackdropWithStylePropsType = {
 	classes: ClassesType,

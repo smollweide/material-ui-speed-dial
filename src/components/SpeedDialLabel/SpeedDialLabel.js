@@ -5,8 +5,7 @@ import { withStyles } from 'material-ui/styles';
 import styles from './SpeedDialLabel.styles';
 
 // Types
-import type { SpeedDialLabelPropsType } from '../../../material-ui-speed-dial.js.flow';
-import type { ClassesType } from '../../types/styles';
+import type { SpeedDialLabelPropsType, ClassesType } from '../../../material-ui-speed-dial.js.flow';
 
 export type SpeedDialLabelWithStylePropsType = {
 	classes: ClassesType,

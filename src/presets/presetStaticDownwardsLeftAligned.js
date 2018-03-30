@@ -1,7 +1,6 @@
 // @flow
 
-import type { PresetRawType } from '../../material-ui-speed-dial.js.flow';
-import type { ThemeType } from '../types/styles';
+import type { PresetRawType, ThemeType } from '../../material-ui-speed-dial.js.flow';
 
 const styles = (theme: ThemeType): PresetRawType => {
 	return {

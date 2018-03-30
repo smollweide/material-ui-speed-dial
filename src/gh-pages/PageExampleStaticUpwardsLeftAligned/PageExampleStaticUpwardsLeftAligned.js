@@ -14,8 +14,9 @@ import presetStaticUpwardsLeftAligned from '../../presets/presetStaticUpwardsLef
 import TemplateExample from '../TemplateExample/TemplateExample';
 
 // types
-import type { ThemeType, ClassesType } from '../../types/styles';
 import type {
+	ThemeType,
+	ClassesType,
 	StylesType,
 	RenderPropsType,
 	RenderButtonPropsType,

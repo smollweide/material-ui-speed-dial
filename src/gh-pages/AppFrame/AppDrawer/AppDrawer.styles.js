@@ -1,5 +1,5 @@
 // @flow
-import type { StylesType } from '../../../types/styles';
+import type { StylesType } from '../../../../material-ui-speed-dial.js.flow';
 
 let stylesRaw;
 
