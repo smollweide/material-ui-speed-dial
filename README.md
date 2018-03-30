@@ -83,6 +83,16 @@ export default withStyles(presetFixedBottomRight)(MyMaterialUiSpeedDial);
 - [Close onClick item](https://smollweide.github.io/material-ui-speed-dial/#/example-close-on-click-item)
 - [Bottom left](https://smollweide.github.io/material-ui-speed-dial/#/example-bottom-left)
 
+## Utils
+
+### combineStyles
+This utils allow's you to combine multiple style objects or createStyle functions
+
+```js
+import combineStyles from '@smollweide/material-ui-speed-dial/dist/utils/combineStyles';
+export default withStyles(combineStyles(stylesA, stylesB))(Component);
+```
+
 ## Flow
 Import the flow lib from node_modules
 
