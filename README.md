@@ -82,6 +82,7 @@ export default withStyles(presetFixedBottomRight)(MyMaterialUiSpeedDial);
 - [Outer rim button](https://smollweide.github.io/material-ui-speed-dial/#/example-outer-rim-button)
 - [Close onClick item](https://smollweide.github.io/material-ui-speed-dial/#/example-close-on-click-item)
 - [Bottom left](https://smollweide.github.io/material-ui-speed-dial/#/example-bottom-left)
+- [Controlled SpeedDial](https://smollweide.github.io/material-ui-speed-dial/#/example-controlled)
 
 ## Utils
 

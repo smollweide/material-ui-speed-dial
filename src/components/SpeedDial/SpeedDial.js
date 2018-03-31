@@ -1,5 +1,5 @@
 // @flow
-
+/* eslint complexity: 0*/
 import React, { Component, Fragment } from 'react';
 import { withStyles } from 'material-ui/styles';
 import styles from './SpeedDial.styles';
@@ -35,12 +35,29 @@ export class SpeedDial extends Component<SpeedDialAllPropsType, SpeedDialStateTy
 		},
 	};
 
-	state = {
-		state: STATE.CLOSED,
-	};
+	constructor(props: SpeedDialAllPropsType) {
+		super(props);
+		this.state = {
+			state: this.isControlled && props.isOpen ? STATE.OPENED : STATE.CLOSED,
+		};
+	}
 
 	componentDidMount() {
 		this.forceSetState = this.setState;
+	}
+
+	componentWillReceiveProps(nextProps: SpeedDialAllPropsType) {
+		if (!this.isControlled) {
+			return;
+		}
+		if (!this.props.isOpen && nextProps.isOpen) {
+			this.open();
+			return;
+		}
+		if (this.props.isOpen && !nextProps.isOpen) {
+			this.close();
+			return;
+		}
 	}
 
 	componentWillUnmount() {
@@ -49,19 +66,35 @@ export class SpeedDial extends Component<SpeedDialAllPropsType, SpeedDialStateTy
 	}
 
 	handleOpen = () => {
-		this.forceSetState({ state: STATE.OPENING }, () => {
-			setTimeout(() => {
-				this.forceSetState({ state: STATE.OPENED });
-			}, this.props.animationDelay);
-		});
+		if (!this.isControlled) {
+			this.open();
+		}
 	};
 	handleClose = () => {
+		if (!this.isControlled) {
+			this.close();
+		}
+	};
+
+	get isControlled(): boolean {
+		return typeof this.props.isOpen === 'boolean';
+	}
+
+	close() {
 		this.forceSetState({ state: STATE.CLOSING }, () => {
 			setTimeout(() => {
 				this.forceSetState({ state: STATE.CLOSED });
 			}, this.props.animationDelay);
 		});
-	};
+	}
+
+	open() {
+		this.forceSetState({ state: STATE.OPENING }, () => {
+			setTimeout(() => {
+				this.forceSetState({ state: STATE.OPENED });
+			}, this.props.animationDelay);
+		});
+	}
 
 	forceSetState: ForceSetStateType;
 

@@ -11,6 +11,7 @@ import PageExampleBasic from '../PageExampleBasic/PageExampleBasic';
 import PageExampleBottomLeft from '../PageExampleBottomLeft/PageExampleBottomLeft';
 import PageExampleOuterRimButton from '../PageExampleOuterRimButton/PageExampleOuterRimButton';
 import PageExampleCloseOnClickItem from '../PageExampleCloseOnClickItem/PageExampleCloseOnClickItem';
+import PageExampleControlled from '../PageExampleControlled/PageExampleControlled';
 import PageExampleStaticUpwardsRightAligned from '../PageExampleStaticUpwardsRightAligned/PageExampleStaticUpwardsRightAligned';
 import PageExampleStaticUpwardsLeftAligned from '../PageExampleStaticUpwardsLeftAligned/PageExampleStaticUpwardsLeftAligned';
 import PageExampleStaticDownwardsRightAligned from '../PageExampleStaticDownwardsRightAligned/PageExampleStaticDownwardsRightAligned';
@@ -74,6 +75,7 @@ class App extends Component<AppPropsType, AppStateType> {
 						<Route exact component={PageExampleOuterRimButton} path="/example-outer-rim-button" />
 						<Route exact component={PageExampleCloseOnClickItem} path="/example-close-on-click-item" />
 						<Route exact component={PageExampleBottomLeft} path="/example-bottom-left" />
+						<Route exact component={PageExampleControlled} path="/example-controlled" />
 						<Route
 							exact
 							component={PageExampleStaticUpwardsRightAligned}

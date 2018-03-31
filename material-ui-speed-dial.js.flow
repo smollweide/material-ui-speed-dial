@@ -7,8 +7,6 @@ export type StylesType = {
 	},
 };
 
-export type StylesCreatorOrObjectType = (...args: Array<*>) => StylesType | StylesType;
-
 export type ClassesType = { [key: string]: string };
 
 type ThemeValueType = string | number;
@@ -98,6 +96,9 @@ export type PresetType = {|
 	backdrop: string,
 |};
 
+export type StylesCreatorType = (...args: Array<*>) => StylesType | PresetRawType;
+export type StylesCreatorOrObjectType = StylesCreatorType | StylesType;
+
 export type StateEnumType = 'closed' | 'opening' | 'opened' | 'closing';
 export type SpeedDialStateType = {|
 	state: StateEnumType,
@@ -179,6 +180,7 @@ export type SpeedDialItemPropsType = {
 };
 
 export type SpeedDialPropsType = {
+	isOpen?: boolean,
 	children: (props: RenderPropsType) => React$Node,
 	className?: string,
 	preset: ClassesType,
@@ -236,6 +238,7 @@ declare module '@smollweide/material-ui-speed-dial/dist/utils/combineStyles' {
 
 declare module '@smollweide/material-ui-speed-dial' {
 	declare export type $StylesType = StylesType;
+	declare export type $StylesCreatorType = StylesCreatorType;
 	declare export type $StylesCreatorOrObjectType = StylesCreatorOrObjectType;
 	declare export type $ClassesType = ClassesType;
 	declare export type $ThemeType = ThemeType;

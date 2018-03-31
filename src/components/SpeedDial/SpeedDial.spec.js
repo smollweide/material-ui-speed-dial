@@ -119,6 +119,80 @@ describe('SpeedDial', () => {
 			done();
 		}, 100);
 	});
+
+	describe('controlled', () => {
+		it('simulate: click open in controlled mode', done => {
+			const _props = { ...props, isOpen: false };
+			const tree = shallow(<SpeedDial {..._props} />);
+			tree.find('button').simulate('click');
+			expect(tree.state('state')).toBe('closed');
+			setTimeout(() => {
+				expect(tree.state('state')).toBe('closed');
+				done();
+			}, 500);
+		});
+		it('simulate: click close in controlled mode', done => {
+			const _props = { ...props, isOpen: true };
+			const tree = shallow(<SpeedDial {..._props} />);
+			tree.find('button').simulate('click');
+			expect(tree.state('state')).toBe('opened');
+			setTimeout(() => {
+				expect(tree.state('state')).toBe('opened');
+				done();
+			}, 500);
+		});
+		it('defined isOpen should switch on controlled mode', () => {
+			const _props = { ...props, isOpen: false };
+			const inst = new SpeedDial(_props);
+			expect(inst.isControlled).toBe(true);
+		});
+		it('wrong defined isOpen should switch off controlled mode', () => {
+			const _props = { ...props, isOpen: 'false' };
+			const inst = new SpeedDial(_props);
+			expect(inst.isControlled).toBe(false);
+		});
+		it('simulate: opening', done => {
+			const _props = { ...props, isOpen: false };
+			const tree = shallow(<SpeedDial {..._props} />);
+			tree.setProps({
+				isOpen: true,
+			});
+			expect(tree.state('state')).toBe('opening');
+			setTimeout(() => {
+				expect(tree.state('state')).toBe('opened');
+				done();
+			}, 500);
+		});
+		it('simulate: closing', done => {
+			const _props = { ...props, isOpen: true };
+			const tree = shallow(<SpeedDial {..._props} />);
+			tree.setProps({
+				isOpen: false,
+			});
+			expect(tree.state('state')).toBe('closing');
+			setTimeout(() => {
+				expect(tree.state('state')).toBe('closed');
+				done();
+			}, 500);
+		});
+		it('recieve props but uncontrolled', () => {
+			const _props = { ...props };
+			const tree = shallow(<SpeedDial {..._props} />);
+			tree.setProps({
+				className: 'test',
+			});
+			expect(tree.state('state')).toBe('closed');
+		});
+		it('recieve props but nothing changes (controlled)', () => {
+			const _props = { ...props, isOpen: true };
+			const tree = shallow(<SpeedDial {..._props} />);
+			tree.setProps({
+				isOpen: true,
+			});
+			expect(tree.state('state')).toBe('opened');
+		});
+	});
+
 	it('styles', () => {
 		expect(typeof styles()).toBe('object');
 	});

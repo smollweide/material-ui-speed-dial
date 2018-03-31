@@ -1,8 +1,6 @@
 // @flow
 
-import type { StylesType } from '../../../material-ui-speed-dial.js.flow';
-
-export type StylesCreatorOrObjectType = (...args: Array<*>) => StylesType | StylesType;
+import type { StylesType, StylesCreatorOrObjectType } from '../../../material-ui-speed-dial.js.flow';
 
 const combineStyles = (...stylesCreators: Array<StylesCreatorOrObjectType>): ((...args: Array<*>) => StylesType) => {
 	return (...args: Array<*>): StylesType => {
