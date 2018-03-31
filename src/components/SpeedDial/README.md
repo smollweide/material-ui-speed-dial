@@ -18,7 +18,7 @@ prop|type|default|required|description
 
 prop|type|description
 ---- | :----: | -----------
-**state** | `'closed' | 'opening' | 'opened' | 'closing'` | detailed current state of the speed dial (also correct in controlled mode) |
+**state** | `'closed' \| 'opening' \| 'opened' \| 'closing'` | detailed current state of the speed dial (also correct in controlled mode) |
 **className** | `string` | |
 **preset** | `{[key: string]: string}` |  |
 **handleClose** | `Function` | will close speed dial on execution |
@@ -28,7 +28,7 @@ prop|type|description
 prop|type|description
 ---- | :----: | -----------
 **key** | `string` | the iteration key |
-**state** | `'closed' | 'opening' | 'opened' | 'closing'` | detailed current state of the speed dial (also correct in controlled mode) |
+**state** | `'closed' \| 'opening' \| 'opened' \| 'closing'` | detailed current state of the speed dial (also correct in controlled mode) |
 **className** | `string` | |
 **onClick** | `(event: Event) => void` | handles the button onClick |
 
@@ -36,7 +36,7 @@ prop|type|description
 
 prop|type|description
 ---- | :----: | -----------
-**state** | `'closed' | 'opening' | 'opened' | 'closing'` | detailed current state of the speed dial (also correct in controlled mode) |
+**state** | `'closed' \| 'opening' \| 'opened' \| 'closing'` | detailed current state of the speed dial (also correct in controlled mode) |
 **className** | `string` | |
 
 ### RenderOpenedButtonProps
@@ -44,7 +44,7 @@ prop|type|description
 prop|type|description
 ---- | :----: | -----------
 **key** | `string` | the iteration key |
-**state** | `'closed' | 'opening' | 'opened' | 'closing'` | detailed current state of the speed dial (also correct in controlled mode) |
+**state** | `'closed' \| 'opening' \| 'opened' \| 'closing'` | detailed current state of the speed dial (also correct in controlled mode) |
 **className** | `string` | |
 **onClick** | `(event: Event) => void` | handles the button onClick |
 
@@ -52,28 +52,28 @@ prop|type|description
 
 prop|type|description
 ---- | :----: | -----------
-**state** | `'closed' | 'opening' | 'opened' | 'closing'` | detailed current state of the speed dial (also correct in controlled mode) |
+**state** | `'closed' \| 'opening' \| 'opened' \| 'closing'` | detailed current state of the speed dial (also correct in controlled mode) |
 **className** | `string` | |
 
 ### RenderOuterRimButtonProps
 
 prop|type|description
 ---- | :----: | -----------
-**state** | `'closed' | 'opening' | 'opened' | 'closing'` | detailed current state of the speed dial (also correct in controlled mode) |
+**state** | `'closed' \| 'opening' \| 'opened' \| 'closing'` | detailed current state of the speed dial (also correct in controlled mode) |
 **className** | `string` | |
 
 ### RenderOuterRimButtonIconProps
 
 prop|type|description
 ---- | :----: | -----------
-**state** | `'closed' | 'opening' | 'opened' | 'closing'` | detailed current state of the speed dial (also correct in controlled mode) |
+**state** | `'closed' \| 'opening' \| 'opened' \| 'closing'` | detailed current state of the speed dial (also correct in controlled mode) |
 **className** | `string` | |
 
 ### RenderListProps
 
 prop|type|description
 ---- | :----: | -----------
-**state** | `'closed' | 'opening' | 'opened' | 'closing'` | detailed current state of the speed dial (also correct in controlled mode) |
+**state** | `'closed' \| 'opening' \| 'opened' \| 'closing'` | detailed current state of the speed dial (also correct in controlled mode) |
 **className** | `string` | |
 **children** | `React$Node` | |
 
@@ -81,6 +81,6 @@ prop|type|description
 
 prop|type|description
 ---- | :----: | -----------
-**state** | `'closed' | 'opening' | 'opened' | 'closing'` | detailed current state of the speed dial (also correct in controlled mode) |
+**state** | `'closed' \| 'opening' \| 'opened' \| 'closing'` | detailed current state of the speed dial (also correct in controlled mode) |
 **className** | `string` | |
 **onClick** | `(event: SyntheticMouseEvent<HTMLDivElement>) => void` | handle click on backdrop |

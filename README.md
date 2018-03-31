@@ -78,22 +78,22 @@ export default withStyles(presetFixedBottomRight)(MyMaterialUiSpeedDial);
 ```
 
 ## Examples
--[Basic](https://smollweide.github.io/material-ui-speed-dial/#/example-basic)
--[Outer rim button](https://smollweide.github.io/material-ui-speed-dial/#/example-outer-rim-button)
--[Close onClick item](https://smollweide.github.io/material-ui-speed-dial/#/example-close-on-click-item)
--[Bottom left](https://smollweide.github.io/material-ui-speed-dial/#/example-bottom-left)
--[Controlled SpeedDial](https://smollweide.github.io/material-ui-speed-dial/#/example-controlled)
+* [Basic](https://smollweide.github.io/material-ui-speed-dial/#/example-basic)
+* [Outer rim button](https://smollweide.github.io/material-ui-speed-dial/#/example-outer-rim-button)
+* [Close onClick item](https://smollweide.github.io/material-ui-speed-dial/#/example-close-on-click-item)
+* [Bottom left](https://smollweide.github.io/material-ui-speed-dial/#/example-bottom-left)
+* [Controlled SpeedDial](https://smollweide.github.io/material-ui-speed-dial/#/example-controlled)
 
 ## API
 
 ### Components
--[SpeedDial](https://github.com/smollweide/material-ui-speed-dial/tree/master/src/components/SpeedDial/README.md)
--[SpeedDialBackdrop](https://github.com/smollweide/material-ui-speed-dial/tree/master/src/components/SpeedDialBackdrop/README.md)
--[SpeedDialItem](https://github.com/smollweide/material-ui-speed-dial/tree/master/src/components/SpeedDialItem/README.md)
--[SpeedDialLabel](https://github.com/smollweide/material-ui-speed-dial/tree/master/src/components/SpeedDialLabel/README.md)
+* [SpeedDial](https://github.com/smollweide/material-ui-speed-dial/tree/master/src/components/SpeedDial/README.md)
+* [SpeedDialBackdrop](https://github.com/smollweide/material-ui-speed-dial/tree/master/src/components/SpeedDialBackdrop/README.md)
+* [SpeedDialItem](https://github.com/smollweide/material-ui-speed-dial/tree/master/src/components/SpeedDialItem/README.md)
+* [SpeedDialLabel](https://github.com/smollweide/material-ui-speed-dial/tree/master/src/components/SpeedDialLabel/README.md)
 
 ### Utils
--[combineStyles](https://github.com/smollweide/material-ui-speed-dial/tree/master/src/utils/combineStyles/README.md)
+* [combineStyles](https://github.com/smollweide/material-ui-speed-dial/tree/master/src/utils/combineStyles/README.md)
 
 ## Flow
 Import the flow lib from node_modules
@@ -104,8 +104,8 @@ Import the flow lib from node_modules
 ```
 
 ## Related
--[material-ui-next](https://material-ui-next.com/) - the next version of [material-ui](http://www.material-ui.com/#/)
--[react-speed-dial](https://github.com/smollweide/react-speed-dial) - speed-dial for material-ui in version 0.x.x
+* [material-ui-next](https://material-ui-next.com/) - the next version of [material-ui](http://www.material-ui.com/#/)
+* [react-speed-dial](https://github.com/smollweide/react-speed-dial) - speed-dial for material-ui in version 0.x.x
 
 ## Contributing
 See [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
