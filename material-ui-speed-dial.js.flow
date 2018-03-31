@@ -112,9 +112,9 @@ export type RenderPropsType = {|
 |};
 export type RenderButtonPropsType = {|
 	key?: string,
+	state: StateEnumType,
 	className: string,
 	onClick: () => void,
-	state: StateEnumType,
 |};
 export type RenderButtonIconPropsType = {|
 	className: string,
@@ -180,12 +180,8 @@ export type SpeedDialItemPropsType = {
 };
 
 export type SpeedDialPropsType = {
-	isOpen?: boolean,
 	children: (props: RenderPropsType) => React$Node,
-	className?: string,
-	preset: ClassesType,
-	animationDelay?: number,
-	renderButton: (props: RenderButtonPropsType, propsIcon: RenderOpenedButtonIconPropsType) => React$Element<*>,
+	renderButton: (props: RenderButtonPropsType, propsIcon: RenderButtonIconPropsType) => React$Element<*>,
 	renderOpenedButton?: (
 		props: RenderOpenedButtonPropsType,
 		propsIcon: RenderOpenedButtonIconPropsType
@@ -196,6 +192,10 @@ export type SpeedDialPropsType = {
 	) => React$Element<*>,
 	renderList: (props: RenderListPropsType) => React$Element<*>,
 	renderBackdrop?: (props: RenderBackdropPropsType) => React$Element<*>,
+	preset: ClassesType,
+	isOpen?: boolean,
+	className?: string,
+	animationDelay?: number,
 };
 
 // mjs types
