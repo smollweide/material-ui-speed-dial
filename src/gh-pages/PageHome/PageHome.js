@@ -1,9 +1,9 @@
 // @flow
 /* eslint flowtype/require-return-type: 0*/
 import React from 'react';
-import { withStyles } from 'material-ui/styles';
-import Typography from 'material-ui/Typography';
-import Button from 'material-ui/Button';
+import { withStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 import { withRouter } from 'react-router';
 import type { RouterHistory as RouterHistoryType } from 'react-router';
 

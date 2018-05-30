@@ -3,11 +3,11 @@
 import React, { Component, Fragment } from 'react';
 import { withRouter } from 'react-router';
 import type { ContextRouter as ContextRouterType } from 'react-router';
-import { withStyles } from 'material-ui/styles';
-import List, { ListItem, ListItemText } from 'material-ui/List';
-import Collapse from 'material-ui/transitions/Collapse';
-import ExpandLess from 'material-ui-icons/ExpandLess';
-import ExpandMore from 'material-ui-icons/ExpandMore';
+import { withStyles } from '@material-ui/core/styles';
+import { List, ListItem, ListItemText } from '@material-ui/core';
+import Collapse from '@material-ui/core/Collapse';
+import ExpandLess from '@material-ui/icons/ExpandLess';
+import ExpandMore from '@material-ui/icons/ExpandMore';
 
 import type { ClassesType } from '../../../../../material-ui-speed-dial.js.flow';
 
