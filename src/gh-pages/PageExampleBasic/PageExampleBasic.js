@@ -1,12 +1,12 @@
 // @flow
 /* eslint flowtype/require-return-type: 0*/
 import React from 'react';
-import { withStyles } from 'material-ui/styles';
-import Button from 'material-ui/Button';
-import Avatar from 'material-ui/Avatar';
+import { withStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import Avatar from '@material-ui/core/Avatar';
 
-import AddIcon from 'material-ui-icons/Add';
-import EditIcon from 'material-ui-icons/Edit';
+import AddIcon from '@material-ui/icons/Add';
+import EditIcon from '@material-ui/icons/Edit';
 
 import SpeedDial, { SpeedDialItem, SpeedDialLabel, SpeedDialBackdrop } from '../../speed-dial';
 import presetFixedBottomRight from '../../presets/presetFixedBottomRight';

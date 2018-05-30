@@ -3,9 +3,9 @@
 import { create, SheetsRegistry } from 'jss';
 import rtl from 'jss-rtl';
 import preset from 'jss-preset-default';
-import { createMuiTheme, createGenerateClassName } from 'material-ui/styles';
-import blue from 'material-ui/colors/blue';
-import pink from 'material-ui/colors/pink';
+import { createMuiTheme, createGenerateClassName } from '@material-ui/core/styles';
+import blue from '@material-ui/core/colors/blue';
+import pink from '@material-ui/core/colors/pink';
 
 export type CreateContextReturnType = {
 	jss: Object,

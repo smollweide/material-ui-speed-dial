@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import JssProvider from 'react-jss/lib/JssProvider';
-import { MuiThemeProvider } from 'material-ui/styles';
+import { MuiThemeProvider } from '@material-ui/core/styles';
 // import getContext, { getTheme } from '../../styles/getContext';
 import createContext from '../../styles/createContext';
 import type { CreateContextReturnType } from '../../styles/createContext';

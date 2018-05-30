@@ -2,13 +2,13 @@
 /* eslint no-inline-comments: 0*/
 /* eslint flowtype/require-return-type: 0*/
 import React, { Fragment } from 'react';
-import { withStyles } from 'material-ui/styles';
-import Drawer from 'material-ui/Drawer';
-import List from 'material-ui/List/List';
-import ListItem from 'material-ui/List/ListItem';
-import ListItemText from 'material-ui/List/ListItemText';
-import ListSubheader from 'material-ui/List/ListSubheader';
-import Divider from 'material-ui/Divider';
+import { withStyles } from '@material-ui/core/styles';
+import Drawer from '@material-ui/core/Drawer';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListSubheader from '@material-ui/core/ListSubheader';
+import Divider from '@material-ui/core/Divider';
 import { withRouter } from 'react-router';
 import type { ContextRouter as ContextRouterType } from 'react-router';
 import styles from './AppDrawer.styles';

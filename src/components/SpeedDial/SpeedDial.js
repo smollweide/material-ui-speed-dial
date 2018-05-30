@@ -1,7 +1,7 @@
 // @flow
 /* eslint complexity: 0*/
 import React, { Component, Fragment } from 'react';
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 import styles from './SpeedDial.styles';
 import type { ClassesType } from './SpeedDial.styles';
 import type { SpeedDialPropsType, StateEnumType, SpeedDialStateType } from '../../../material-ui-speed-dial.js.flow';

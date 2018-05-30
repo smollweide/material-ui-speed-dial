@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import { HashRouter, Route } from 'react-router-dom';
-import CssBaseline from 'material-ui/CssBaseline';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 import AppWrapper from '../AppWrapper/AppWrapper';
 import AppFrame from '../AppFrame/AppFrame';
